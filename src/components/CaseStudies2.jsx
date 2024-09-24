@@ -78,10 +78,13 @@ const CaseStudies2 = () => {
       setExpandedBox(boxId); // Set the clicked box as expanded
     }
   };
+  const handleBoxHover = () => {
+    setExpandedBox(null);
+  };
 
   return (
     <div className="flex flex-col bg-[#F7F0FF] md:pt-8 md:pb-20 px-4 md:px-10 xl:px-20">
-      <div className="py-8">
+      <div className="pt-8">
         <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans">
           Product Tear-down & Case Studies
         </div>
@@ -91,11 +94,11 @@ const CaseStudies2 = () => {
       </div>
 
       <div className="hidden lg:flex flex-col items-center justify-center">
-            <div className="flex flex-nowrap gap-4 bg-transparent h-[400px] w-full max-w-screen-2xl items-center p-0">
+            <div className="flex flex-nowrap gap-4 bg-transparent h-[320px] w-full max-w-screen-2xl items-center">
                 {boxes.map((box, index) => (
                     <motion.div
                         key={box.id}
-                        className="text-white flex rounded-xl hover:cursor-pointer items-center shadow shadow-lg justify-center bg-black h-1/3 xl:h-2/5 transition-all duration-300"
+                        className="text-white flex rounded-xl hover:cursor-pointer items-center shadow shadow-lg justify-center bg-black h-2/5 xl:h-1/2 transition-all duration-300"
                         style={{
                             backgroundImage: `url(${box.image})`,
                             backgroundSize: "cover",
@@ -104,19 +107,20 @@ const CaseStudies2 = () => {
                           }}
                         whileHover={{
                             width: "50%",   // Box grows horizontally on hover
-                            height: "70%",
+                            height: "85%",
                         }}
                         // initial={{
                         //     width: "24%",   // Initial width of the box
                         // }}
                         animate={{
-                          width: expandedBox === box.id ? "60%" : "24%",  // Expand on click
-                          height: expandedBox === box.id ? "70%" : "",  // Set height on click or reset
+                          width: expandedBox === box.id ? "50%" : "24%",  // Expand on click
+                          height: expandedBox === box.id ? "85%" : "",  // Set height on click or reset
                         }}
                         transition={{
                             duration: 0.2,
                         }}
                         onClick={() => handleBoxClick(box.id)}
+                        onHoverStart={() => handleBoxHover()}
                     >
                     </motion.div>
                 ))}
