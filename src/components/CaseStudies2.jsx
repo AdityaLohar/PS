@@ -79,7 +79,7 @@ const CaseStudies2 = () => {
       </div>
 
       <div className="hidden lg:flex flex-col items-center justify-center">
-            <div className="flex flex-nowrap gap-4 bg-gray-100 h-[45vh] w-[70vw] max-w-screen-xl items-center p-0">
+            <div className="flex flex-nowrap gap-4 bg-transparent h-[45vh] w-[70vw] max-w-screen-xl items-center p-0">
                 {boxes.map((box, index) => (
                     <motion.div
                         key={box.id}
