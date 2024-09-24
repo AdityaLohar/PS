@@ -113,7 +113,7 @@ const CaseStudies2 = () => {
                         //     width: "24%",   // Initial width of the box
                         // }}
                         animate={{
-                          width: expandedBox === box.id ? "50%" : "24%",  // Expand on click
+                          width: expandedBox === box.id ? "60%" : "24%",  // Expand on click
                           height: expandedBox === box.id ? "85%" : "",  // Set height on click or reset
                         }}
                         transition={{
@@ -121,6 +121,7 @@ const CaseStudies2 = () => {
                         }}
                         onClick={() => handleBoxClick(box.id)}
                         onHoverStart={() => handleBoxHover()}
+                        onHoverEnd={() => handleBoxHover()}
                     >
                     </motion.div>
                 ))}
