@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import netflix from "../assets/netflix-logo.jpg";
 import primeVideo from "../assets/prime-video.svg";
@@ -67,19 +67,39 @@ const CaseStudies2 = () => {
     },
   ];
 
-
   const [expandedBox, setExpandedBox] = useState(null);
+  const [hoveredBox, setHoveredBox] = useState(null);
+
+  const hoveringRef = useRef(null);
 
   const handleBoxClick = (boxId) => {
-    // Toggle box expansion on click
     if (expandedBox === boxId) {
-      setExpandedBox(null); // Reset if the same box is clicked again
+      setExpandedBox(null);
     } else {
-      setExpandedBox(boxId); // Set the clicked box as expanded
+      setExpandedBox(boxId);
     }
   };
-  const handleBoxHover = () => {
-    setExpandedBox(null);
+
+  const handleBoxHover = (boxId) => {
+    setExpandedBox(null)
+
+    // Clear any existing timeout before starting a new one
+    if (hoveringRef.current) {
+      clearTimeout(hoveringRef.current);
+    }
+
+    // Set a timeout to display the hovered content after 500ms
+    hoveringRef.current = setTimeout(() => {
+      setHoveredBox(boxId);
+    }, 500);
+    
+  };
+  const handleBoxHoverEnd = () => {
+    if (hoveringRef.current) {
+      clearTimeout(hoveringRef.current);
+    }
+    setExpandedBox(null)
+    setHoveredBox(null); // Clear the hovered box state immediately
   };
 
   return (
@@ -94,39 +114,57 @@ const CaseStudies2 = () => {
       </div>
 
       <div className="hidden lg:flex flex-col items-center justify-center">
-            <div className="flex flex-nowrap gap-4 bg-transparent h-[320px] w-full max-w-screen-2xl items-center">
-                {boxes.map((box, index) => (
-                    <motion.div
-                        key={box.id}
-                        className="text-white flex rounded-xl hover:cursor-pointer items-center shadow shadow-lg justify-center bg-black h-2/5 xl:h-1/2 transition-all duration-300"
-                        style={{
-                            backgroundImage: `url(${box.image})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                            backgroundRepeat: "no-repeat",
-                          }}
-                        whileHover={{
-                            width: "50%",   // Box grows horizontally on hover
-                            height: "85%",
-                        }}
-                        // initial={{
-                        //     width: "24%",   // Initial width of the box
-                        // }}
-                        animate={{
-                          width: expandedBox === box.id ? "60%" : "24%",  // Expand on click
-                          height: expandedBox === box.id ? "85%" : "",  // Set height on click or reset
-                        }}
-                        transition={{
-                            duration: 0.2,
-                        }}
-                        onClick={() => handleBoxClick(box.id)}
-                        onHoverStart={() => handleBoxHover()}
-                        onHoverEnd={() => handleBoxHover()}
-                    >
-                    </motion.div>
-                ))}
-            </div>
+        <div className="flex flex-nowrap gap-4 bg-transparent h-[320px] custom-9:h-[350px] w-full max-w-screen-2xl items-center">
+          {boxes.map((box, index) => (
+            <motion.div
+              key={box.id}
+              className="relative text-white flex rounded-xl hover:cursor-pointer items-center shadow-lg h-[140px] custom-7:h-[150px] xl:h-[160px] custom-10:h-[170px] justify-center bg-black transition-all duration-300"
+              style={{
+                backgroundImage: `url(${box.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              whileHover={{
+                width: "50%", // Box grows horizontally on hover
+                height: "85%",
+              }}
+              animate={{
+                width: expandedBox === box.id ? "60%" : "24%", // Expand on click
+                height: expandedBox === box.id ? "85%" : "", // Set height on click or reset
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+              onClick={() => handleBoxClick(box.id)}
+              onHoverStart={() => handleBoxHover(box.id)}
+              onHoverEnd={handleBoxHoverEnd}
+            >
+              {/* Box content */}
+              {hoveredBox === box.id && (
+                <div className="absolute inset-0 flex flex-col justify-end items-center bg-black bg-opacity-0 p-4 rounded-xl">
+                  <a href={box.url} target="_blank" rel="noopener noreferrer">
+                    <div className="bg-[rgba(0,0,0,0.7)] border border-white rounded-2xl text-white p-4 space-y-2 w-full h-full max-h-[210px]">
+                      <div className="text-[20px] md:text-[16px] xl:text-[18px] pr-4">
+                        {box.desc}
+                      </div>
+                      <div className="text-[14px] md:text-[12px] xl:text-[14px] font-normal pr-4">
+                        A sneak peek into what you will learn in our 10-week
+                        curriculum.
+                      </div>
+                      <div className="flex justify-end">
+                        <div className="text-[12px] md:text-[10px] xl:text-[12px] font-normal">
+                          Published on: 25th May 24
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              )}
+            </motion.div>
+          ))}
         </div>
+      </div>
 
       {/* <div className="hidden lg:flex justify-center text-[16px] text-[#FF559E] font-semibold underline my-3 mt-6">
         <button>Check out more Case Studies</button>
