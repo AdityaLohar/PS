@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import BlogPage from './pages/BlogPage';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
+import CaseStudy from './pages/CaseStudy';
 
 function App() {
   const location = useLocation();
@@ -31,13 +32,14 @@ function App() {
           <Route path='/blogs' element={<BlogPage />} />
           <Route path="/blogs/:id" element={<Blog />} />
           <Route path='/faq' element={<FaqPage />} />
-          <Route path='/pm' element={<PmFellowship />} />
+          <Route path='/pm-fellowship' element={<PmFellowship />} />
         </Routes>
       {/* </Router> */}
       <div className={`w-full bg-black ${isHomePage ? 'lg:pb-16' : ''}`}>
         <Footer />
       </div>
     </div>
+    // strata scratch
   )
 }
 

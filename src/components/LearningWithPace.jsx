@@ -99,7 +99,8 @@ const LearningWithPace = () => {
   const { title, desc, imgs, week } = courseContent[currentWeekIndex];
 
   return (
-    <div className="bg-[#FFF1D4] pb-16 px-4 md:px-10 xl:px-32 pt-8 md:pt-12 lg:pt-16 font-hind">
+    <div className="border border-2 border-[#FFF1D4] pb-16 px-4 md:px-10 xl:px-32 pt-8 md:pt-12 lg:pt-16 font-hind">
+    {/* <div className="bg-[#FFF1D4] pb-16 px-4 md:px-10 xl:px-32 pt-8 md:pt-12 lg:pt-16 font-hind"> */}
       <div className="flex flex-col lg:flex-row py-4 px-4 md:px-8 lg:px-20 lg:py-12 justify-between gap-2 bg-white rounded-3xl">
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-3 w-full">

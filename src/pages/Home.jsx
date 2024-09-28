@@ -12,7 +12,6 @@ import BottomBar from './../components/BottomBar';
 import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CourseSnapshot from "../components/CourseSnapshot";
-import CaseStudies2 from './../components/CaseStudies2';
 
 const Home = () => {
   const [showBottomBar, setShowBottomBar] = useState(false);
@@ -59,8 +58,7 @@ const Home = () => {
         <div className="w-full max-w-screen-2xl space-y-10 md:space-y-0">
           <Results />
           <Alumini />
-          {/* <CaseStudies1 /> */}
-          <CaseStudies2 />
+          <CaseStudies1 />
           <NewsLetter />
           <Faq />
         </div>

@@ -1,7 +1,7 @@
 import discountBg from "../assets/discountBg.svg";
-import disco3 from "../assets/disco-lights1.png";
-import disco2 from "../assets/disco-lights2.png";
-import disco1 from "../assets/disco-lights3.png";
+import disco33 from "../assets/disco-lights1.png";
+import disco22 from "../assets/disco-lights2.png";
+import disco11 from "../assets/disco-lights3.png";
 import clock from "../assets/clock.svg";
 import download from "../assets/download.svg";
 import offer from "../assets/offer-valid.svg";
@@ -9,9 +9,8 @@ import { useEffect, useState } from "react";
 import EnrollmentForm from "./EnrollmentForm";
 import DownloadCurriculumForm from "./DownloadCurriculumForm";
 
-const PmFellowshipHeroSection = () => {
-  const [bgImages, setBgImages] = useState([disco1, disco2, disco3]);
-  const [opacity, setOpacity] = useState([1, 0, 0]);
+const PmFellowshipHeroSection1 = () => {
+  const [bgImages, setBgImages] = useState([disco11, disco22, disco33]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +26,7 @@ const PmFellowshipHeroSection = () => {
       setIsVisibleEnquire(false);
       setTimeout(() => setIsOpenEnquire(false), 300);
     }
-  }
+  };
 
   const toggleModal = () => {
     if (!isOpen) {
@@ -46,31 +45,19 @@ const PmFellowshipHeroSection = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setOpacity([0, 0, 0]); // Start fading out
-      setTimeout(() => {
-        rotateBackgrounds();
-        setOpacity([1, 0, 0]); // Fade in after rotating
-      }, 600); // Match this duration with your fade-out duration
+    // const interval = setInterval(() => {
+    //   rotateBackgrounds();
+    // }, 2000); // Rotate every 2 seconds
 
-    }, 3000);
-
-    return () => clearInterval(interval); // Cleanup on component unmount
+    // return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
-  
 
   return (
-    <div
-      className="bg-white pt-8 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-32 font-hind"
-      // className="bg-transparent pt-8 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-32 font-hind"
-      // style={{
-      //   backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
-      //   backgroundPosition: "bottom center, bottom right -10%, bottom left -5%",
-      //   backgroundSize: "cover, contain, contain", // Adjust size for each image
-      //   backgroundRepeat: "no-repeat, no-repeat, no-repeat", // Prevent repeating
-      //   transition: "background-image 0.3s ease-in-out"
-      // }}
-    >
+    <div className="relative pt-8 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-32 font-hind rotating-background">
+      <div className="background-image" style={{ backgroundImage: `url(${bgImages[0]})` }} />
+      <div className="background-image" style={{ backgroundImage: `url(${bgImages[1]})` }} />
+      <div className="background-image" style={{ backgroundImage: `url(${bgImages[2]})` }} />
+      
       <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-12 items-center justify-between gap-6 md:gap-8 lg:gap-12 border border-1 border-[#00B5CE] rounded-[24px] md:rounded-[32px] px-4 md:px-12 lg:px-20">
         <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-1/2">
           <div className="flex flex-col gap-1">
@@ -96,7 +83,7 @@ const PmFellowshipHeroSection = () => {
           </div>
 
           <div className="flex items-center gap-1 text-[16px] mt-3 lg:mt-6">
-            <img src={clock} alt="" className="pb-1"/>
+            <img src={clock} alt="" className="pb-1" />
             <div>
               Hurry! <span className="font-bold">50 people</span> have already
               enrolled in the past 1 month
@@ -104,10 +91,11 @@ const PmFellowshipHeroSection = () => {
           </div>
         </div>
 
-        <div className="relative bg-white rounded-[24px] md:rounded-[32px] lg:w-[37%] shadow-lg p-4 md:p-12 lg:absolute border border-1 border-[#00B5CE] lg:right-10 lg:top-1/2 lg:transform lg:-translate-y-1/2"
-            style={{
-                background: "linear-gradient(to bottom, white 67%, #D7F5FF 60%)", // 2/3 white, 1/3 blue
-              }}
+        <div
+          className="relative bg-white rounded-[24px] md:rounded-[32px] lg:w-[37%] shadow-lg p-4 md:p-12 lg:absolute border border-1 border-[#00B5CE] lg:right-10 lg:top-1/2 lg:transform lg:-translate-y-1/2"
+          style={{
+            background: "linear-gradient(to bottom, white 67%, #D7F5FF 60%)", // 2/3 white, 1/3 blue
+          }}
         >
           <div
             className="absolute top-0 right-5 sm:right-10 h-1/2 text-white py-1 px-3 text-[14px] pt-3"
@@ -118,13 +106,13 @@ const PmFellowshipHeroSection = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-           <span className="font-bold">25%</span> <br /> OFF
+            <span className="font-bold">30%</span> <br /> OFF
           </div>
           <div className="text-start pt-2">
-            <p className="text-[14px]">👉🏻 Best price for next 5 seats</p>
+            <p className="text-[14px]">👉🏻 Early Bird Offer for first 8 seats</p>
             <div className="flex gap-2 items-end">
               <p className="text-[24px] md:text-[32x] lg:text-[40px] font-bold text-black font-sans">
-                ₹22,499
+                ₹20,999
               </p>
               <p className="text-[18px] line-through pb-1">₹29,999</p>
             </div>
@@ -133,44 +121,67 @@ const PmFellowshipHeroSection = () => {
           <div className="space-y-3 mt-4 text-[14px]">
             <div className="flex items-end gap-1">
               <div>
-                <img src={offer} alt="offer-valid" className="h-[20px] w-[20px]" /> 
+                <img
+                  src={offer}
+                  alt="offer-valid"
+                  className="h-[20px] w-[20px]"
+                />
               </div>
               <div>
-                <p>
-                  Offer valid till 5th Oct 2024
-                </p>
+                <p>Offer valid till 26th Sep 2024</p>
               </div>
             </div>
 
-            <p className=""> Pay 50% now to enrol and remaining in next 2 weeks.</p>
-            
-            <div className="font-semibold text-[14px]">
-              Cohort seats: 60
+            <p className="">
+              {" "}
+              Pay 50% now to enrol and remaining in next 2 weeks.
+            </p>
+
+            <div className="font-medium text-[13px]">
+              Last <span className="text-red-500">43 seats left</span>
             </div>
           </div>
-          
-            <button onClick={toggleModalEnquire} className="flex w-full bg-yellow-400 hover:bg-yellow-500 text-black p-2 px-6 md:p-3 md:px-8 rounded-full mt-6 flex  items-center justify-center text-[20px] shadow-[5px_5px_0_rgba(0,0,0)] ">
-              <div className="flex flex-col gap-0 md:gap-1 text-start font-semibold">
-                Enroll Now
-              </div>
-              <div className="ml-2 text-xl">→</div>
-            </button>
+
+          <button
+            onClick={toggleModalEnquire}
+            className="flex w-full bg-yellow-400 hover:bg-yellow-500 text-black p-2 px-6 md:p-3 md:px-8 rounded-full mt-6 flex  items-center justify-center text-[20px] shadow-[5px_5px_0_rgba(0,0,0)] "
+          >
+            <div className="flex flex-col gap-0 md:gap-1 text-start font-semibold">
+              Enroll Now
+            </div>
+            <div className="ml-2 text-xl">→</div>
+          </button>
           {/* <a href="https://pages.razorpay.com/getintoPM" target="_blank">
           </a> */}
 
-          <button onClick={toggleModal} className="w-full bg-white border border-black text-[20px] text-black font-semibold py-3 rounded-full mt-4 flex justify-center gap-2">
-              Download Curriculum
+          <button
+            onClick={toggleModal}
+            className="w-full bg-white border border-black text-[20px] text-black font-semibold py-3 rounded-full mt-4 flex justify-center gap-2"
+          >
+            Download Curriculum
           </button>
         </div>
 
         <div className="relative">
-        {/* Modal */}
-        <EnrollmentForm setIsOpen={setIsOpenEnquire} isVisible={isVisibleEnquire} setIsVisible={setIsVisibleEnquire} isOpen={isOpenEnquire} toggleModal={toggleModalEnquire} />
-        <DownloadCurriculumForm setIsOpen={setIsOpen} isVisible={isVisible} setIsVisible={setIsVisible} isOpen={isOpen} toggleModal={toggleModal} />
-      </div>
+          {/* Modal */}
+          <EnrollmentForm
+            setIsOpen={setIsOpenEnquire}
+            isVisible={isVisibleEnquire}
+            setIsVisible={setIsVisibleEnquire}
+            isOpen={isOpenEnquire}
+            toggleModal={toggleModalEnquire}
+          />
+          <DownloadCurriculumForm
+            setIsOpen={setIsOpen}
+            isVisible={isVisible}
+            setIsVisible={setIsVisible}
+            isOpen={isOpen}
+            toggleModal={toggleModal}
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-export default PmFellowshipHeroSection;
+export default PmFellowshipHeroSection1;

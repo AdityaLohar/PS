@@ -7,7 +7,8 @@ const BenefitCard = ({ vector, title, desc, size }) => {
   return (
     <div>
       <div
-        className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+        className={`bg-white rounded-2xl border border-2 hover:border-transparent p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+        // className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
       >
         <div
           className={`flex ${
@@ -29,7 +30,8 @@ const BenefitCard = ({ vector, title, desc, size }) => {
 
 const Benefits = ({ bgColor }) => {
   return (
-    <div className={`flex flex-col bg-[${bgColor}] pb-10`}>
+    // <div className={`flex flex-col bg-[${bgColor}] pb-10`}>
+    <div className={`flex flex-col bg-white border border-2 border-[${bgColor}] pb-10`}>
       <div className="py-5 lg:py-12">
         <div className="text-[28px] lg:text-[40px] font-bold px-2 text-center font-sans px-4">
           Benefits of Joining Product Space
@@ -42,10 +44,11 @@ const Benefits = ({ bgColor }) => {
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 lg:gap-5 px-2 lg:px-16 py-4 lg:py-8">
         <div>
           <div
-            className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+            className={`bg-white rounded-2xl p-4 border border-2 hover:border-transparent items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+            // className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
           >
-            <div className={`flex mb-4 justify-center sm:justify-start`}>
-              <img src={vector1} alt="" className="w-14 h-14" />
+            <div className={`flex mb-2 justify-center sm:justify-start`}>
+              <img src={vector1} alt="" className="w-[70px] h-[70px]" />
             </div>
             <div className="text-[20px] lg:text-[28px] font-semibold mb-4 lg:mb-10 font-sans">
               Personalized Guidance
@@ -62,28 +65,39 @@ const Benefits = ({ bgColor }) => {
           title={"Interview Preparation"}
           desc={`Comprehensive interview preparation, feedback sessions and mock
             interviews.`}
-          size={20}
-        />
-
-        <BenefitCard
-          vector={vector3}
-          title={"Industry Focus Content"}
-          desc={`Actionable insights tailored to specific domains & real product use-cases.`}
           size={16}
         />
 
         <div>
           <div
+            className={`bg-white rounded-2xl p-4 border border-2 hover:border-transparent  items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+            // className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+          >
+            <div className={`flex mb-2 justify-center sm:justify-start`}>
+              <img src={vector3} alt="" className="w-[70px] h-[70px]" />
+            </div>
+            <div className="text-[20px] lg:text-[28px] font-semibold mb-4 lg:mb-10 font-sans">
+              Industry Focus Content
+            </div>
+            <div className="text-[14px] lg:text-[18px] text-gray-500 font-medium md:leading-7">
+            Actionable insights tailored to specific domains & real product use-cases.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div
+            // className={`bg-white rounded-2xl p-4 border border-2 hover:border-transparent items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
             className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
           >
             <div className={`flex mb-4 justify-center sm:justify-start`}>
               <img src={vector4} alt="" className="h-16 w-14 md:h-14" />
             </div>
             <div className="text-[20px] lg:text-[28px] font-semibold mb-4 lg:mb-10 font-sans">
-            Job Placements Support
+              Job Placements Support
             </div>
             <div className="text-[14px] lg:text-[18px] text-gray-500 font-medium md:leading-7">
-            Access to the latest jobs from 350+ product companies
+              Access to the latest jobs from 350+ product companies
             </div>
           </div>
         </div>

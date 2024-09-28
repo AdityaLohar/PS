@@ -169,6 +169,7 @@ const Alumni = () => {
 
   return (
     <div className="flex flex-col bg-[#D7F5FF] pb-10">
+     {/* <div className="flex flex-col border border-2 border-[#D7F5FF] pb-10"> */}
       <div className="py-5 lg:py-10">
         <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans px-4">
           Our Successful Alumni
@@ -184,9 +185,11 @@ const Alumni = () => {
         >
           {[...Array(5)].map((_, i) => (
             alumni.map((alums, index) => (
-              <div
+              <a
+                href={alums.linkedin}
+                target="_blank"
                 key={`${alums.id}-${index}-${i}`}
-                className="scroll-item"
+                className="scroll-item hover:cursor-pointer"
               >
                 <AlumniCard
                   profile={alums.profile}
@@ -197,7 +200,7 @@ const Alumni = () => {
                   curPost={alums.curPost}
                   testimonial={alums.testimonial}
                 />
-              </div>
+              </a>
             ))
           ))}
 
