@@ -70,8 +70,8 @@ const VideoContent = () => {
 
 const CourseSnapshot = () => {
   return (
-    <div className="bg-white pb-0 px-4 md:px-10 xl:px-32 pt-10 font-hind">
-      <div className="flex flex-col lg:flex-row py-4 lg:py-12 items-between justify-between gap-12">
+    <div className="bg-white px-4 md:px-10 xl:px-32 py-12 font-hind">
+      <div className="flex flex-col lg:flex-row items-between justify-between gap-12">
         <div className="flex flex-col gap-2 lg:gap-6">
           <div className="text-[28px] lg:text-[40px] font-bold px-2 mb-4 lg:mb-8 text-center lg:text-start font-sans">
             Course Snapshot
@@ -104,7 +104,7 @@ const CourseSnapshot = () => {
 
           </div>
 
-          <div className="space-y-3 my-8 text-[16px] md:text-[18px]">
+          <div className="space-y-3 mt-8 text-[16px] md:text-[18px]">
             <div className="flex gap-2 items-start lg:items-center">
               {" "}
               <img src={tick} alt="" /> PM Foundations

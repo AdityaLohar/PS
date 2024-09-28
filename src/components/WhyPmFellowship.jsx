@@ -29,11 +29,11 @@ const BenefitCard = ({ vector, title, desc, size }) => {
   );
 };
 
-const WhyPmFellowship = ({ bgColor }) => {
+const WhyPmFellowship = () => {
   return (
     // <div className={`flex flex-col bg-[${bgColor}] pb-10`}>
-    <div className={`flex flex-col border border-2 border-[${bgColor}] pb-10`}>
-      <div className="py-5 lg:py-12">
+    <div className={`flex flex-col bg-[#F9FAFB] py-12`}>
+      <div className="">
         <div className="text-[28px] lg:text-[40px] font-bold px-2 text-center font-sans">
           Why should you{" "}
           <span

@@ -38,8 +38,8 @@ const NewsLetter = () => {
 
   return (
     // <div className="flex flex-col bg-[#F1E6FF] pb-5 lg:pb-10">
-    <div className="flex flex-col bg-white pb-5 lg:pb-20 lg:pt-16">
-      <div className="py-5 lg:pb-8">
+    <div className="flex flex-col bg-white py-4 md:py-16">
+      <div className="">
         <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans px-4">
           Subscribe to our Newsletter
         </div>

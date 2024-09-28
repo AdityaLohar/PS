@@ -221,7 +221,7 @@ const reviews = [
 
 const ReviewPmFellowship = () => {
   return (
-    <div className="flex flex-col border border-2 border-[#F7F0FF] bg-white pb-10 pt-4 lg:pt-0 px-4 md:px-10 xl:px-32">
+    <div className="flex flex-col  bg-[#F9FAFB] pb-10 pt-4 lg:pt-0 px-4 md:px-10 xl:px-32">
     {/* <div className="flex flex-col bg-[#F7F0FF] pb-10 pt-4 lg:pt-0 px-4 md:px-10 xl:px-32"> */}
       <div className="py-5 lg:py-12">
         <div className="text-[28px] lg:text-[40px] font-bold px-2 text-center md:text-start font-sans px-4">

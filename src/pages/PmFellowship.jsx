@@ -37,7 +37,7 @@ const PmFellowship = () => {
           <PmFellowshipHeroSection />
           <LearningWithPace />
           <HandsOnTools />
-          <WhyPmFellowship bgColor={"#F7F0FF"} />
+          <WhyPmFellowship />
           <Companies />
           <ResultsPmFellowship />
           <MeetMentors bgColor={"#fff"} />
