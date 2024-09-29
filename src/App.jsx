@@ -11,6 +11,7 @@ import BlogPage from './pages/BlogPage';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
 import CaseStudy from './pages/CaseStudy';
+import ReferralPage from './pages/ReferralPage';
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
           <Route path='/blogs' element={<BlogPage />} />
           <Route path="/blogs/:id" element={<Blog />} />
           <Route path='/faq' element={<FaqPage />} />
+          <Route path='/referral' element={<ReferralPage />} />
           <Route path='/pm-fellowship' element={<PmFellowship />} />
         </Routes>
       {/* </Router> */}
