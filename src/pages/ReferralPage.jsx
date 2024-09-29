@@ -64,7 +64,8 @@ const ReferralPage = () => {
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const result = schema.safeParse({ email });
 
     if (name === "") {
@@ -155,7 +156,7 @@ const ReferralPage = () => {
 
                 <div className="flex flex-col items-center">
                   <button
-                    onClick={handleSubmit}
+                    onClick={(e) => handleSubmit(e)}
                     className="text-[14px] lg:text-[20px] w-full bg-[#FEC923] text-black font-semibold p-2 md:px-6 md:py-4 rounded-full hover:bg-yellow-500"
                   >
                     {loading ? "Loading..." : "Submit"}
