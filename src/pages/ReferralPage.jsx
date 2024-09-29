@@ -104,7 +104,7 @@ const ReferralPage = () => {
 
   return (
     <>
-        <>
+        <form>
           {/* Modal overlay */}
           <div
             className="fixed inset-0 bg-black bg-opacity-70 z-50"
@@ -209,7 +209,7 @@ const ReferralPage = () => {
               </div>
             )}
           </div>
-        </>
+        </form>
     </>
   );
 };
