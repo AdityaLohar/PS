@@ -9,9 +9,9 @@ const schema = z.object({
   email: z.string().email("Invalid email address"),
 });
 
-const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_BASE_URL;
+const airtableReferralUrl = import.meta.env.VITE_AIRTABLE_REFERRAL_URL;
+const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_ENROLLMENT_URL;
 const accessToken = import.meta.env.VITE_AIRTABLE_ACCESS_TOKEN;
-
 
 const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal }) => {
   const [name, setName] = useState("");
@@ -20,6 +20,57 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
   const [notification, setNotification] = useState(null);
   const [showNotification, setShowNotification] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const checkReferralAndIncrement = async () => {
+    const params = window.location.href;
+    // const referralLink = params.get('ref');
+    const referralLink = params;
+    
+    console.log("in check ref", referralLink)
+    if (!referralLink) return; // If no referral link in URL, don't proceed
+    
+    try {
+      // Query Airtable using the referral link
+      const formula = `AND({Referral Link}='${referralLink}')`;
+      const encodedFormula = encodeURIComponent(formula);
+  
+      const response = await axios.get(`${airtableReferralUrl}?filterByFormula=${encodedFormula}`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (response.data.records.length > 0) {
+        // User found, increment their referral count
+        const user = response.data.records[0];
+        const userId = user.id;
+        const currentCount = user.fields["Conversion"] || 0; // Default to 0 if no count exists
+  
+        // Increment the referral count
+        await axios.patch(
+          `${airtableReferralUrl}/${userId}`,
+          {
+            fields: {
+              "Conversion": currentCount + 1,
+            },
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+  
+        console.log("Conversion count incremented successfully!");
+      } else {
+        console.log("Referral link is invalid.");
+      }
+    } catch (error) {
+      console.error("Error fetching/incrementing conversion count:", error);
+    }
+  };
 
   const saveUserData = async (name, email, phoneNumber) => {
     try {
@@ -98,7 +149,12 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
     const res = await saveUserData(name, email, number);
     setLoading(false);
 
-    window.location.href = "https://rzp.io/l/getintoPM";
+    checkReferralAndIncrement();
+
+    setTimeout(() => {
+      window.location.href = "https://rzp.io/l/getintoPM";
+    }, 500)
+
 
     // Automatically hide notification after 10 seconds
     setTimeout(() => {

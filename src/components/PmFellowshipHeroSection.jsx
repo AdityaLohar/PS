@@ -8,6 +8,7 @@ import offer from "../assets/offer-valid.svg";
 import { useEffect, useState } from "react";
 import EnrollmentForm from "./EnrollmentForm";
 import DownloadCurriculumForm from "./DownloadCurriculumForm";
+import { useParams } from "react-router-dom";
 
 const PmFellowshipHeroSection = () => {
   const [bgImages, setBgImages] = useState([disco1, disco2, disco3]);
@@ -18,6 +19,8 @@ const PmFellowshipHeroSection = () => {
 
   const [isOpenEnquire, setIsOpenEnquire] = useState(false);
   const [isVisibleEnquire, setIsVisibleEnquire] = useState(false);
+
+  const {id} = useParams();
 
   const toggleModalEnquire = () => {
     if (!isOpenEnquire) {
@@ -45,7 +48,21 @@ const PmFellowshipHeroSection = () => {
     });
   };
 
+  const checkReferralPage = () => {
+    // Check if the 'id' parameter exists
+    if (id) {
+      setIsOpenEnquire(true);
+      setIsVisibleEnquire(true);
+    } 
+    else {
+      setIsOpen(false);
+      setIsVisible(false);
+    }
+  }
+
   useEffect(() => {
+    checkReferralPage();
+
     const interval = setInterval(() => {
       setOpacity([0, 0, 0]); // Start fading out
       setTimeout(() => {

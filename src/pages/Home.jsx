@@ -12,6 +12,7 @@ import BottomBar from './../components/BottomBar';
 import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CourseSnapshot from "../components/CourseSnapshot";
+import Referral from "../components/Referral";
 
 const Home = () => {
   const [showBottomBar, setShowBottomBar] = useState(false);
@@ -59,6 +60,7 @@ const Home = () => {
           <Results />
           <Alumini />
           <CaseStudies1 />
+          <Referral />
           <NewsLetter />
           <Faq />
         </div>
