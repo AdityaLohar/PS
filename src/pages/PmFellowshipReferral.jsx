@@ -10,7 +10,7 @@ import WhyPmFellowship from "../components/WhyPmFellowship";
 import { v4 as uuidv4 } from 'uuid';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 
 const airtableReferralUrl = import.meta.env.VITE_AIRTABLE_REFERRAL_URL;
@@ -20,18 +20,29 @@ const PmFellowshipReferral = () => {
   const sectionRef = useRef(null);
   const location = useLocation();
 
+  const { id } = useParams();
+
   const checkReferralAndIncrement = async () => {
     const referralLink = window.location.href;
 
-    let userId = localStorage.getItem("referee-id");
-    if (userId) {
+    let parsedData = JSON.parse(localStorage.getItem("referralData"));
+    let referredId = parsedData?.id;
+
+    console.log({referredId: referredId, id: id});
+
+    if (referredId == id) {
       // Return if UUID is already stored
+      console.log(referredId);
       return;
     }
     
     // Generate a new UUID if not already stored
-    userId = uuidv4();
-    localStorage.setItem("referee-id", userId);
+    let userId = uuidv4();
+    const data = {
+      userId: userId,
+      id: id,
+    };
+    localStorage.setItem("referralData", JSON.stringify(data));
     
     console.log("in check ref", referralLink)
     if (!referralLink) return; // If no referral link in URL, don't proceed

@@ -56,16 +56,18 @@ const Referral = () => {
   };
 
   const generateReferralLink = (name, email) => {
-    const url = location.window.href;
-    
+    const url = window.location.href;
+
     console.log("url", url);
-    const baseUrl = `${url}/pm-fellowship/referral`; // Replace with your domain
+    const baseUrl = `${url}pm-fellowship/referral`; // Replace with your domain
     console.log("baseUrl", baseUrl);
     const timestamp = Date.now(); // Get the current timestamp for uniqueness
+
+    const encodedName = btoa(name);
+    const encodedEmail = btoa(email);
   
     // Create a simple referral link using the user's name, email, and timestamp
-    // We use encodeURIComponent to safely encode the user's name and email
-    const refLink = `${baseUrl}/${encodeURIComponent(name)}-${encodeURIComponent(email)}-${timestamp}`;
+    const refLink = `${baseUrl}/${encodedName}-${encodedEmail}-${timestamp}`;
     
     return refLink;
   };
