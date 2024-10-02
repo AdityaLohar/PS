@@ -123,7 +123,7 @@ const ResultsPmFellowship = () => {
       <div className="flex justify-center">
         <button
           onClick={toggleModal}
-          className="bg-[#FFC303] font-semibold text-[18px] p-4 rounded-full w-[200px] md:w-[300px]"
+          className="bg-[#FFC303] font-semibold text-[18px] p-4 rounded-full w-[300px] md:w-[300px]"
         >
           You can be <span className="font-bold">NEXT</span>
         </button>

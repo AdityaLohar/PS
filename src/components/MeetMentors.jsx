@@ -144,7 +144,7 @@ const MeetMentors = ({ bgColor }) => {
       <div className="flex justify-center pt-6">
         <button
           onClick={toggleModal}
-          className="md:w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
+          className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
         >
           <p>Enroll Now</p>
         </button>

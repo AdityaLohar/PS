@@ -147,8 +147,8 @@ const CourseSnapshot = () => {
             </div>
           </div>
 
-          <div>
-            <button onClick={toggleModal} className="bg-[#FFC303] font-semibold p-4 rounded-full text-[18px] md:w-[300px]">Enroll Now</button>
+          <div className="flex justify-center md:justify-start">
+            <button onClick={toggleModal} className="bg-[#FFC303] font-semibold p-4 rounded-full text-[18px] w-[300px]">Enroll Now</button>
           </div>
         </div>
 

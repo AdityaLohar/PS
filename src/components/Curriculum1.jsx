@@ -17,13 +17,13 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
       }`}
     >
       <div
-        className={`flex justify-between items-center cursor-pointer transition-all duration-500 ease-in-out ${
+        className={`flex md:justify-between items-center cursor-pointer transition-all duration-500 ease-in-out ${
           isOpen ? "rounded-t-md" : "rounded-md"
         } bg-[#E6E6E6] p-5`}
         onClick={onClick}
       >
         <div className="text-[18px] font-semibold text-black font-sans">
-          <h2 className="font-sans text-[18px] font-semibold  text-center lg:text-start">
+          <h2 className="font-sans text-[18px] font-semibold  text-start">
             <span className="text-[24px]">
               {" "}
               {title[0] === "0"
@@ -55,7 +55,7 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
       </div>
 
       <div
-        className={`overflow-hidden bg-white rounded-b-md transition-all duration-300 ease-in-out px-12 space-y-8 ${
+        className={`overflow-hidden bg-white rounded-b-md transition-all duration-300 ease-in-out px-6 lg:px-12 space-y-8 ${
           isOpen ? "max-h-screen opacity-100 py-6" : "py-0"
         }`}
         style={{ maxHeight: isOpen ? "1000px" : "0" }}
@@ -134,9 +134,10 @@ const Curriculum1 = () => {
 
   return (
     <div className="flex flex-col px-4 xl:px-20">
-      <div className="py-5 lg:py-14 flex px-10 justify-between">
-        <div className="w-2/3 space-y-2">
-          <div className="text-[40px] font-bold font-sans">
+      <div className="py-5 lg:py-14 flex flex-col md:flex-row px-10 justify-between">
+
+        <div className="w-full md:w-2/3 space-y-4 md:space-y-2">
+          <div className="text-[28px] lg:text-[40px] font-bold font-sans">
           How your curriculum will look like 
           what you will learn
           </div>
@@ -154,31 +155,32 @@ const Curriculum1 = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between">
-          <div className="flex gap-4 xl:gap-12">
+        <div className="flex flex-col gap-6 justify-between pt-4">
+          <div className="flex justify-around gap-4 xl:gap-12">
             <div className="text-hind font-medium">
-              <p className="text-[40px] text-black font-semibold font-sans">
+              <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">
                 5
               </p>
               <p>Weeks</p>
             </div>
             <div className="text-hind font-medium">
-              <p className="text-[40px] text-black font-semibold font-sans">
+              <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">
                 40+
               </p>
               <p>Hours</p>
             </div>
             <div className="text-hind font-medium">
-              <p className="text-[40px] text-black font-semibold font-sans">
+              <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">
                 100+
               </p>
               <p>Classes</p>
             </div>
           </div>
+
           <div>
             <button
             onClick={toggleModal}
-            className="md:w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold p-4 rounded-full flex justify-center items-center gap-2"
+            className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold p-4 rounded-full flex justify-center items-center gap-2"
           >
             <img src={downloadLogo} alt="" />
             <p>Download Curriculum</p>
@@ -211,13 +213,13 @@ const Curriculum1 = () => {
       <div className="flex flex-col items-center justify-center pt-14 gap-4">
         <button
           onClick={toggleModalEnquire}
-          className="md:w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
+          className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
         >
           <p>Enroll Now</p>
         </button>
         <button
           onClick={toggleModal}
-          className="md:w-[300px] bg-white text-[18px] text-black font-semibold p-3 rounded-full flex justify-center items-center gap-2"
+          className="w-[300px] bg-white text-[18px] text-black font-semibold p-3 rounded-full flex justify-center items-center gap-2"
         >
           <img src={downloadLogo} alt="" />
           <p>Download Curriculum</p>
