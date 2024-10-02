@@ -51,7 +51,7 @@ const NewsLetter = () => {
       </div>
 
       <div className="flex justify-center items-center mt-0 lg:mt-10 px-4">
-        <div className="flex justify-between items-center bg-[#C3C3C3] rounded-full p-1 lg:p-2 mx-2 lg:mx-0 w-full lg:w-3/5">
+        <div className="flex justify-between items-center bg-white border border-2 border-[#c3c3c3] rounded-full p-1 lg:p-2 mx-2 lg:mx-0 w-full lg:w-3/5">
           <input
             type="text"
             placeholder="Enter your Email Id"

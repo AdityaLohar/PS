@@ -12,14 +12,14 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
     <div
       className={`relative bg-white rounded-lg transition-all duration-500 ease-in-out ${
         isOpen
-          ? "border border-2 border-[#00B5CE]"
+          ? "border border-2 border-[#111]"
           : "border border-2 border-transparent"
       }`}
     >
       <div
         className={`flex justify-between items-center cursor-pointer transition-all duration-500 ease-in-out ${
           isOpen ? "rounded-t-md" : "rounded-md"
-        } bg-[#D7F5FF] p-5`}
+        } bg-[#c3c3c3] p-5`}
         onClick={onClick}
       >
         <div className="text-[18px] font-semibold text-black font-sans">
