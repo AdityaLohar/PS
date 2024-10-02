@@ -42,47 +42,23 @@ const DropdownList = ({ len, flag }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const questions = [
-        "What is Product Space?",
-        "Who is Product Space for?",
-        "What programs does Product Space offer?",
-        "How do I enroll in a cohort?",
-        "What is included in a Product Space cohort?",
-        "How long is each cohort program?",
-        "What kind of support can I expect during the cohort?",
-        "Do I need prior experience in product management to join?",
-        "What happens after I complete the cohort?",
-        "How can I access the resources and interview guides?",
-        "Is there a payment plan available?",
-        "Can I get a refund if I am unable to complete the program?",
-        "How can I contact support?",
+        "Who is eligible to apply for the Product Fellowship Cohort?",
+        "What is the price for the Product Fellowship Cohort?",
+        "When does the next cohort begin?",
+        "Do I get a certificate post-completion of the cohort?",
+        "Can I connect with past alumni after the cohort?",
       ];
       
       const contents = [
-        "Product Space is an ed-tech platform offering comprehensive programs, resources, and mentorship to help individuals transition into or advance their careers in product management.",
+        "Anyone with a passion for product management and a desire to transition into the role, regardless of background, can apply.",
+  
+        "Pricing details are available upon request. Please reach out to us for the latest information.",
         
-        "Product Space is designed for aspiring product managers, current product professionals looking to upskill, and individuals transitioning from other fields like operations, finance, or marketing into product management.",
+        "The next cohort dates are announced on our website. Stay tuned for updates!",
         
-        "We offer various cohorts, including Product Management Fellowships and hands-on mentorship from industry leaders.",
+        "Yes, you will receive a certificate upon successfully completing the fellowship.",
         
-        "To enroll, simply visit our Cohort Page and follow the steps to sign up. You will be guided through the process to select the cohort that best fits your career goals.",
-        
-        "Each cohort includes live sessions with product experts, hands-on case studies, real-world projects, interview preparation, and ongoing mentorship to help you become a successful product manager.",
-        
-        "Our cohorts typically last 8-12 weeks, depending on the program. Specific timelines can be found on the respective cohort pages.",
-        
-        "You will receive continuous guidance from mentors, access to a community of peers, personalized feedback on assignments, and exclusive resources designed to help you succeed.",
-        
-        "No prior experience is necessary. Our programs are designed for beginners as well as professionals looking to enhance their product management skills.",
-        
-        "Upon completing the cohort, you will receive a certificate, continued access to our alumni network, and the opportunity to participate in job placement support.",
-        
-        "Resources and interview guides will be available after your cohort completion or as part of our stand-alone product offerings. Stay tuned for updates!",
-        
-        "Yes, we offer flexible payment plans to make our programs accessible to everyone. Details can be found on the payment section of the cohort page.",
-        
-        "We offer refunds within a certain time frame before the cohort begins. Please refer to our refund policy for more details.",
-        
-        "You can reach out to our support team via email at support@productspace.com or through our contact form on the website.",
+        "Yes, you will have opportunities to engage with our alumni network for mentorship and guidance.",
       ];
       
 
@@ -99,7 +75,7 @@ const DropdownList = ({ len, flag }) => {
       };
     
       return (
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 w-full'>
           {questions.slice(0, visibleCount).map((question, index) => (
             <DropdownItem
               key={index}
@@ -124,4 +100,20 @@ const DropdownList = ({ len, flag }) => {
       );
 };
 
-export default DropdownList;
+const FaqPmFellowship = () => {
+  return (
+    <div className="flex flex-col bg-[#F5F5F5] pb-20">
+      <div className="py-5 lg:py-8">
+        <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans px-4">
+          Frequently Asked Questions
+        </div>
+      </div>
+
+      <div className="flex justify-between px-4 lg:px-20 gap-4">
+        <DropdownList len={5} flag={1} />
+      </div>
+    </div>
+  );
+};
+
+export default FaqPmFellowship;

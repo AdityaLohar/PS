@@ -12,7 +12,8 @@ import { useLocation } from "react-router-dom";
 import Transitions from "../components/Transitions";
 import CourseSnapshot from "../components/CourseSnapshot";
 import Curriculum1 from './../components/Curriculum1';
-import Faq from "../components/Faq";
+import FaqPmFellowship from "../components/FaqPmFellowship";
+import Faq from './../components/Faq';
 
 const PmFellowship = () => {
   const sectionRef = useRef(null);
@@ -22,6 +23,9 @@ const PmFellowship = () => {
   useEffect(() => {
     if (location.hash === "#reviews") {
       sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+    else {
+      window.scrollTo(0, 0);
     }
   }, [location]);
 
@@ -44,13 +48,13 @@ const PmFellowship = () => {
           <CourseSnapshot />
           <Curriculum1 />
           <HandsOnTools />
-          <WhyPmFellowship bgColor={"#F7F0FF"} />
+          <WhyPmFellowship bgColor={"#F5F5F5"} />
           <MeetMentors bgColor={"#fff"} />
           <div ref={sectionRef} id="reviews">
             <ReviewPmFellowship />
           </div>
-          <Faq />
           <MeetAlums />
+          <FaqPmFellowship />
         </div>
       </div>
     </HelmetProvider>

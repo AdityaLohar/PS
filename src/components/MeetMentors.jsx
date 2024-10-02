@@ -4,8 +4,9 @@ import microsoft from "../assets/microsoft.svg";
 import fedex from "../assets/fedex.svg";
 import reliance from "../assets/reliance.svg";
 import inmobi from "../assets/inmobi.svg";
-
 import MentorCard1 from "./MentorCard1";
+import { useState } from "react";
+import EnrollmentForm from "./EnrollmentForm";
 
 const mentors = [
   {
@@ -73,6 +74,19 @@ const mentors = [
 ];
 
 const MeetMentors = ({ bgColor }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleModal = () => {
+    if (!isOpen) {
+      setIsOpen(true);
+      setTimeout(() => setIsVisible(true), 10);
+    } else {
+      setIsVisible(false);
+      setTimeout(() => setIsOpen(false), 300);
+    }
+  };
+
   return (
     <div
       className={`flex flex-col pb-10 `}
@@ -95,11 +109,21 @@ const MeetMentors = ({ bgColor }) => {
 
       <div
         className="overflow-x-auto md:overflow-hidden hover:cursor-default mentor-scrollbar md:scroll-container"
-        onMouseEnter={() => document.documentElement.style.setProperty('--scroll-animation-play-state', 'paused')}
-        onMouseLeave={() => document.documentElement.style.setProperty('--scroll-animation-play-state', 'running')}
+        onMouseEnter={() =>
+          document.documentElement.style.setProperty(
+            "--scroll-animation-play-state",
+            "paused"
+          )
+        }
+        onMouseLeave={() =>
+          document.documentElement.style.setProperty(
+            "--scroll-animation-play-state",
+            "running"
+          )
+        }
       >
         <div className="flex scroll-wrapper">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(5)].map((_, i) =>
             mentors.map((mentor, index) => (
               <div key={`${mentor.id}-${index}-${i}`} className="scroll-item">
                 <MentorCard1
@@ -113,18 +137,28 @@ const MeetMentors = ({ bgColor }) => {
                 />
               </div>
             ))
-          ))}
+          )}
         </div>
       </div>
 
-          <div className="flex justify-center pt-6">
-            <button
-            // onClick={toggleModalEnquire}
-            className="md:w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
-          >
-            <p>Enroll Now</p>
-          </button>
-          </div>
+      <div className="flex justify-center pt-6">
+        <button
+          onClick={toggleModal}
+          className="md:w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
+        >
+          <p>Enroll Now</p>
+        </button>
+      </div>
+
+      <div>
+        <EnrollmentForm
+          setIsOpen={setIsOpen}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+          isOpen={isOpen}
+          toggleModal={toggleModal}
+        />
+      </div>
     </div>
   );
 };

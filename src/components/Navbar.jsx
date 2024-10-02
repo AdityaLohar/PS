@@ -3,6 +3,8 @@ import logo from "../assets/ps-logo-dark.svg";
 import { RiArrowRightSFill } from "react-icons/ri";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ContactUsForm from "./ContactUsForm";
+import { useRecoilState } from "recoil";
+import { isOpenFormState, isVisibleformState } from "../atoms/modalState";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -13,8 +15,8 @@ const Navbar = () => {
   const [showTopBar, setShowTomBar] = useState(true);
   const [daysToGo, setDaysToGo] = useState(0);
 
-  const [isOpenForm, setIsOpenForm] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useRecoilState(isVisibleformState); // Recoil for visibility
+  const [isOpenForm, setIsOpenForm] = useRecoilState(isOpenFormState);
 
   const toggleModal = () => {
     if (!isOpenForm) {
@@ -186,9 +188,6 @@ const Navbar = () => {
           Contact Us
         </a>
       </div>
-
-      <ContactUsForm setIsOpen={setIsOpenForm} isVisible={isVisible} setIsVisible={setIsVisible} isOpen={isOpenForm} toggleModal={toggleModal} />
-      
     </div>
   );
 };

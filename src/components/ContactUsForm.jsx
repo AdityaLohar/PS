@@ -4,24 +4,35 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaCheckCircle, FaExclamationCircle, FaTimes } from "react-icons/fa";
 import { z } from "zod";
 import axios from 'axios';
+import { isOpenFormState, isVisibleformState } from "../atoms/modalState";
+import { useRecoilState } from "recoil";
 
 const schema = z.object({
   email: z.string().email("Invalid email address"),
 });
 
-const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_BASE_URL;
+const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_BASE_CONTACT_US_URL;
 const accessToken = import.meta.env.VITE_AIRTABLE_ACCESS_TOKEN;
 
 
-const ContactUsForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal }) => {
+const ContactUsForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const [query, setQuery] = useState("");
   const [notification, setNotification] = useState(null);
   const [showNotification, setShowNotification] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const saveUserData = async (name, email, phoneNumber) => {
+  const [isVisible, setIsVisible] = useRecoilState(isVisibleformState); // Recoil for visibility
+  const [isOpen, setIsOpen] = useRecoilState(isOpenFormState);
+
+  const toggleModal = () => {
+    setIsVisible(false);
+    setIsOpen(false);
+  }
+
+  const saveUserData = async (name, email, phoneNumber, query) => {
     try {
       const response = await axios.post(
         airtableBaseUrl,
@@ -30,6 +41,7 @@ const ContactUsForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal
             Name: name,
             'Mobile Number': phoneNumber, // Make sure this matches exactly
             'Email Id': email,           // Make sure this matches exactly
+            'Query': query,
           },
         },
         {
@@ -95,10 +107,8 @@ const ContactUsForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal
     }
     
     setLoading(true);
-    const res = await saveUserData(name, email, number);
+    const res = await saveUserData(name, email, number, query);
     setLoading(false);
-
-    window.location.href = "https://rzp.io/l/getintoPM";
 
     // Automatically hide notification after 10 seconds
     setTimeout(() => {
@@ -134,9 +144,12 @@ const ContactUsForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal
 
               {/* Form */}
               <div>
-                <h2 className="text-[25px] md:text-[34px] font-bold mb-4 font-sans text-center">
-                  Contact Us
-                </h2>
+                <div className="text-center space-y-3 pb-4">
+                  <h2 className="text-[25px] md:text-[34px] font-bold font-sans text-center">
+                    Contact Us
+                  </h2>
+                  <p>You will hear from us within 12 hours</p>
+                </div>
 
                 <div className="mb-4">
                   <input
@@ -165,6 +178,16 @@ const ContactUsForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal
                     placeholder="Your Mobile Number*"
                     required
                     onChange={(e) => setNumber(e.target.value)}
+                  />
+                </div>
+                
+                <div className="mb-4">
+                  <input
+                    type="text"
+                    className="input w-full p-3 md:p-5 border font-semibold placeholder:text-gray-400 border-gray-300 rounded-lg outline-none"
+                    placeholder="Query"
+                    required
+                    onChange={(e) => setQuery(e.target.value)}
                   />
                 </div>
 

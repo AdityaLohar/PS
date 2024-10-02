@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
+import EnrollmentForm from "./EnrollmentForm";
 
 const ResultCard = ({ id, flag, number, title, desc }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -60,6 +61,19 @@ const ResultCard = ({ id, flag, number, title, desc }) => {
 };
 
 const ResultsPmFellowship = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleModal = () => {
+    if (!isOpen) {
+      setIsOpen(true);
+      setTimeout(() => setIsVisible(true), 10);
+    } else {
+      setIsVisible(false);
+      setTimeout(() => setIsOpen(false), 300);
+    }
+  };
+
   return (
     <div className="flex flex-col gap-8 mb-10 lg:mb-12">
       <div className="mx-4 md:mx-10 lg:mx-20 py-4 lg:py-8 px-2 lg:px-10 mt-6 lg:mt-12 border-2 border-[#C3C3C3] bg-[#F5F5F5] rounded-xl">
@@ -104,11 +118,25 @@ const ResultsPmFellowship = () => {
             </div>
           </div>
         </div>
-
       </div>
 
       <div className="flex justify-center">
-        <button className="bg-[#FFC303] font-semibold text-[18px] p-4 rounded-full w-[200px] md:w-[300px]">You can be <span className="font-bold">NEXT</span></button>
+        <button
+          onClick={toggleModal}
+          className="bg-[#FFC303] font-semibold text-[18px] p-4 rounded-full w-[200px] md:w-[300px]"
+        >
+          You can be <span className="font-bold">NEXT</span>
+        </button>
+      </div>
+
+      <div>
+        <EnrollmentForm
+          setIsOpen={setIsOpen}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+          isOpen={isOpen}
+          toggleModal={toggleModal}
+        />
       </div>
     </div>
   );

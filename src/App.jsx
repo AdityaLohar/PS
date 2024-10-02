@@ -10,7 +10,8 @@ import { useEffect } from 'react';
 import BlogPage from './pages/BlogPage';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
-import CaseStudy from './pages/CaseStudy';
+import ContactUsForm from './components/ContactUsForm';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   const location = useLocation();
@@ -24,8 +25,9 @@ function App() {
   const isHomePage = location.pathname === '/';
 
   return (
-    <div>
+    <RecoilRoot>
       <Navbar />
+      <ContactUsForm />
       {/* <Router> */}
         <Routes>
           <Route path='/' element={<Home />} />
@@ -38,7 +40,7 @@ function App() {
       <div className={`w-full bg-black ${isHomePage ? 'lg:pb-16' : ''}`}>
         <Footer />
       </div>
-    </div>
+    </RecoilRoot>
     // strata scratch
   )
 }

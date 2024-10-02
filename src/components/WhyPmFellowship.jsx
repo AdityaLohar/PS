@@ -44,7 +44,7 @@ const WhyPmFellowship = ({ bgColor }) => {
           >
             choose
           </span>{" "}
-          our <span className="text-[#9747FF]">PM Fellowship Program</span>
+          our <span className="text-black">PM Fellowship Program</span>
         </div>
         <div className="text-[16px] text-center text-gray-800 font-medium mt-2 px-4 xl:px-60">
           <p>Connect with Mentors and Alums to get career counselling </p>

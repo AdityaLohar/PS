@@ -2,6 +2,7 @@ import tick from "../assets/tick-green.svg";
 import courseSnapshotVideo from "../assets/course-snapshot-video.mp4";
 import courseSnapshot from "../assets/course-snapshot.jpg";
 import { useRef, useState } from "react";
+import EnrollmentForm from "./EnrollmentForm";
 
 const VideoContent = () => {
   const videoRef = useRef(null); // Reference to the video element
@@ -69,6 +70,20 @@ const VideoContent = () => {
 };
 
 const CourseSnapshot = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  
+  const toggleModal = () => {
+    if (!isOpen) {
+      setIsOpen(true);
+      setTimeout(() => setIsVisible(true), 10);
+    } else {
+      setIsVisible(false);
+      setTimeout(() => setIsOpen(false), 300);
+    }
+  };
+
   return (
     <div className="bg-[#F5F5F5] pb-0 px-4 md:px-10 xl:px-32 pt-0 font-hind">
       <div className="flex flex-col lg:flex-row py-4 lg:py-12 items-between justify-between gap-12">
@@ -133,7 +148,7 @@ const CourseSnapshot = () => {
           </div>
 
           <div>
-            <button className="bg-[#FFC303] font-semibold p-4 rounded-full text-[18px] md:w-[300px]">Enroll Now</button>
+            <button onClick={toggleModal} className="bg-[#FFC303] font-semibold p-4 rounded-full text-[18px] md:w-[300px]">Enroll Now</button>
           </div>
         </div>
 
@@ -141,6 +156,16 @@ const CourseSnapshot = () => {
           {/* <VideoContent /> */}
           <img src={courseSnapshot} alt="" />
         </div>
+      </div>
+
+      <div>
+        <EnrollmentForm
+          setIsOpen={setIsOpen}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+          isOpen={isOpen}
+          toggleModal={toggleModal}
+        />
       </div>
     </div>
   );
