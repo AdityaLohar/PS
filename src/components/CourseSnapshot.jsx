@@ -70,8 +70,8 @@ const VideoContent = () => {
 
 const CourseSnapshot = () => {
   return (
-    <div className="bg-white px-4 md:px-10 xl:px-32 py-12 font-hind">
-      <div className="flex flex-col lg:flex-row items-between justify-between gap-12">
+    <div className="bg-[#F5F5F5] pb-0 px-4 md:px-10 xl:px-32 pt-0 font-hind">
+      <div className="flex flex-col lg:flex-row py-4 lg:py-12 items-between justify-between gap-12">
         <div className="flex flex-col gap-2 lg:gap-6">
           <div className="text-[28px] lg:text-[40px] font-bold px-2 mb-4 lg:mb-8 text-center lg:text-start font-sans">
             Course Snapshot
@@ -82,11 +82,11 @@ const CourseSnapshot = () => {
             <img src={courseSnapshot} alt="" />
           </div>
 
-          <div className="flex flex-col lg:flex-row bg-[#9747FF] p-4 lg:p-10 text-[18px] text-white gap-4 xl:gap-8 rounded-2xl flex-wrap">
-            <div className="flex justify-around w-full md:gap-4 xl:gap-8">
+          <div className="flex flex-col lg:flex-row bg-[#EBEBEB] border border-2 border-[#C3C3C3] p-4 lg:p-10 text-[18px] text-white gap-4 xl:gap-8 rounded-2xl flex-wrap">
+            <div className="flex justify-around w-full md:gap-4 xl:gap-8 text-black">
               
               <div className="text-center">
-                <span className="text-[32px] lg:text-[40px] 2xl:text-[46px] font-sans font-semibold text-yellow-400">
+                <span className="text-[32px] lg:text-[40px] 2xl:text-[46px] font-sans font-semibold">
                   450+
                 </span>{" "}
                 <br />
@@ -94,7 +94,7 @@ const CourseSnapshot = () => {
               </div>
 
               <div className="text-center">
-                <span className="text-[32px] lg:text-[40px] 2xl:text-[46px] font-sans font-semibold text-yellow-400">
+                <span className="text-[32px] lg:text-[40px] 2xl:text-[46px] font-sans font-semibold">
                   310+
                 </span>{" "}
                 <br />
@@ -104,7 +104,7 @@ const CourseSnapshot = () => {
 
           </div>
 
-          <div className="space-y-3 mt-8 text-[16px] md:text-[18px]">
+          <div className="space-y-3 my-8 text-[16px] md:text-[18px]">
             <div className="flex gap-2 items-start lg:items-center">
               {" "}
               <img src={tick} alt="" /> PM Foundations
@@ -130,6 +130,10 @@ const CourseSnapshot = () => {
               {" "}
               <img src={tick} alt="" /> Work on Live Projects for real-world product development
             </div>
+          </div>
+
+          <div>
+            <button className="bg-[#FFC303] font-semibold p-4 rounded-full text-[18px] md:w-[300px]">Enroll Now</button>
           </div>
         </div>
 

@@ -11,8 +11,6 @@ import BlogPage from './pages/BlogPage';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
 import CaseStudy from './pages/CaseStudy';
-import ReferralPage from './pages/ReferralPage';
-import PmFellowshipReferral from './pages/PmFellowshipReferral';
 
 function App() {
   const location = useLocation();
@@ -35,7 +33,6 @@ function App() {
           <Route path="/blogs/:id" element={<Blog />} />
           <Route path='/faq' element={<FaqPage />} />
           <Route path='/pm-fellowship' element={<PmFellowship />} />
-          <Route path='/pm-fellowship/referral/:id' element={<PmFellowshipReferral />} />
         </Routes>
       {/* </Router> */}
       <div className={`w-full bg-black ${isHomePage ? 'lg:pb-16' : ''}`}>

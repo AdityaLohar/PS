@@ -13,7 +13,7 @@ const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_BASE_URL;
 const accessToken = import.meta.env.VITE_AIRTABLE_ACCESS_TOKEN;
 
 
-const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal }) => {
+const ContactUsForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModal }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -44,7 +44,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
       setNotification({
         type: "success",
         title: "Details Submitted!",
-        description: "Our Expert Consultant will Call you back.",
+        description: "Our Mentors will reach out to you soon.",
       });
       setShowNotification(true);
     } 
@@ -135,12 +135,8 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
               {/* Form */}
               <div>
                 <h2 className="text-[25px] md:text-[34px] font-bold mb-4 font-sans text-center">
-                  PM Fellowship Waitlist
+                  Contact Us
                 </h2>
-                <h3 className="text-[14px] md:text-[16px] mb-4 text-center">
-                Personalized Guidance | Interview Preparation | Industry Focus Content | Job Placements Support -{" "}
-                  <span className="font-bold">All at one place</span>
-                </h3>
 
                 <div className="mb-4">
                   <input
@@ -180,7 +176,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
                     {loading ? "Loading..." : "Submit"}
                   </button>
                   <div className="text-[12px] md:text-[16px] p-2 py-3 font-semibold">
-                    <p>Get 1-1 mentorship via our PM Fellowship cohort</p>
+                    <p>One of our mentors will reach out to you</p>
                   </div>
                 </div>
               </div>
@@ -222,7 +218,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
                     onClick={() => setShowNotification(false)}
                     className="text-xl font-bold"
                   >
-                    ×
+                    x
                   </button>
                 </div>
               </div>
@@ -234,4 +230,4 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
   );
 };
 
-export default EnrollmentForm;
+export default ContactUsForm;

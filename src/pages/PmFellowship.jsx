@@ -1,6 +1,5 @@
 import Companies from "../components/Companies";
 import HandsOnTools from "../components/HandsOnTools";
-import LearningWithPace from "../components/LearningWithPace";
 import MeetAlums from "../components/MeetAlums";
 import MeetMentors from "../components/MeetMentors";
 import PmFellowshipHeroSection from "../components/PmFellowshipHeroSection";
@@ -10,6 +9,10 @@ import WhyPmFellowship from "../components/WhyPmFellowship";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import Transitions from "../components/Transitions";
+import CourseSnapshot from "../components/CourseSnapshot";
+import Curriculum1 from './../components/Curriculum1';
+import Faq from "../components/Faq";
 
 const PmFellowship = () => {
   const sectionRef = useRef(null);
@@ -35,15 +38,18 @@ const PmFellowship = () => {
 
         <div className="w-full max-w-screen-2xl">
           <PmFellowshipHeroSection />
-          <LearningWithPace />
-          <HandsOnTools />
-          <WhyPmFellowship />
+          <Transitions />
           <Companies />
           <ResultsPmFellowship />
+          <CourseSnapshot />
+          <Curriculum1 />
+          <HandsOnTools />
+          <WhyPmFellowship bgColor={"#F7F0FF"} />
           <MeetMentors bgColor={"#fff"} />
           <div ref={sectionRef} id="reviews">
             <ReviewPmFellowship />
           </div>
+          <Faq />
           <MeetAlums />
         </div>
       </div>

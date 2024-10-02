@@ -8,7 +8,6 @@ import offer from "../assets/offer-valid.svg";
 import { useEffect, useState } from "react";
 import EnrollmentForm from "./EnrollmentForm";
 import DownloadCurriculumForm from "./DownloadCurriculumForm";
-import { useParams } from "react-router-dom";
 
 const PmFellowshipHeroSection = () => {
   const [bgImages, setBgImages] = useState([disco1, disco2, disco3]);
@@ -19,8 +18,6 @@ const PmFellowshipHeroSection = () => {
 
   const [isOpenEnquire, setIsOpenEnquire] = useState(false);
   const [isVisibleEnquire, setIsVisibleEnquire] = useState(false);
-
-  const {id} = useParams();
 
   const toggleModalEnquire = () => {
     if (!isOpenEnquire) {
@@ -48,21 +45,7 @@ const PmFellowshipHeroSection = () => {
     });
   };
 
-  const checkReferralPage = () => {
-    // Check if the 'id' parameter exists
-    if (id) {
-      setIsOpenEnquire(true);
-      setIsVisibleEnquire(true);
-    } 
-    else {
-      setIsOpen(false);
-      setIsVisible(false);
-    }
-  }
-
   useEffect(() => {
-    checkReferralPage();
-
     const interval = setInterval(() => {
       setOpacity([0, 0, 0]); // Start fading out
       setTimeout(() => {
@@ -78,15 +61,14 @@ const PmFellowshipHeroSection = () => {
 
   return (
     <div
-      className="bg-white pt-8 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-24 font-hind"
-      // className="bg-transparent pt-8 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-32 font-hind"
-      // style={{
-      //   backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
-      //   backgroundPosition: "bottom center, bottom right -10%, bottom left -5%",
-      //   backgroundSize: "cover, contain, contain", // Adjust size for each image
-      //   backgroundRepeat: "no-repeat, no-repeat, no-repeat", // Prevent repeating
-      //   transition: "background-image 0.3s ease-in-out"
-      // }}
+      className="bg-transparent pt-8 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-32 font-hind"
+      style={{
+        backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
+        backgroundPosition: "bottom center, bottom right -10%, bottom left -5%",
+        backgroundSize: "cover, contain, contain", // Adjust size for each image
+        backgroundRepeat: "no-repeat, no-repeat, no-repeat", // Prevent repeating
+        transition: "background-image 0.3s ease-in-out"
+      }}
     >
       <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-12 items-center justify-between gap-6 md:gap-8 lg:gap-12 border border-1 border-[#00B5CE] rounded-[24px] md:rounded-[32px] px-4 md:px-12 lg:px-20">
         <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-1/2">

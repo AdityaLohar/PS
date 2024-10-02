@@ -186,7 +186,7 @@ const alumni = [
   {
     id: 13,
     profile:
-      "https://media.licdn.com/dms/image/v2/D5603AQFMbZpJ37CxTw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714399013199?e=1732147200&v=beta&t=2hcf98hBsmMHNMao-jnRc5XkVdNhoxBzZtLLP1pqy9g",
+      "https://media.licdn.com/dms/image/v2/D5603AQGTWvA7LLGNHg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727371385878?e=1733356800&v=beta&t=54ZzT83NAOBnQRUHESKx_acyOAF2tijD9KI4apyZ5FQ",
     name: "Gaddam Pranay",
     // prevCompany: "HealMeRight",
     prevCompany:

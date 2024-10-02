@@ -12,7 +12,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`https://productspaceorgin.wpcomstaging.com/wp-json/wp/v2/posts/${id}?_embed`);
+        const response = await fetch(`https://public-api.wordpress.com/wp/v2/sites/productspaceorgin.wordpress.com/posts/${id}`);
         
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -47,7 +47,7 @@ const Blog = () => {
       {post && (
         <div className="max-w-3xl mx-auto py-6">
         {/* Render the post title */}
-        <h1 className="text-[24px] lg:text-[36px] font-bold mb-4">{post.title.rendered}</h1>
+        <h1 className="text-[24px] lg:text-[36px] font-bold mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h1>
   
         {/* Render the post content (headings, paragraphs, etc.) */}
         <div

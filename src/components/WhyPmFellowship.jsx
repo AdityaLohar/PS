@@ -8,8 +8,7 @@ const BenefitCard = ({ vector, title, desc, size }) => {
   return (
     <div>
       <div
-        className={`bg-white rounded-2xl p-4 border border-2 hover:border-transparent items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
-        // className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+        className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
       >
         <div
           className={`flex ${
@@ -29,11 +28,10 @@ const BenefitCard = ({ vector, title, desc, size }) => {
   );
 };
 
-const WhyPmFellowship = () => {
+const WhyPmFellowship = ({ bgColor }) => {
   return (
-    // <div className={`flex flex-col bg-[${bgColor}] pb-10`}>
-    <div className={`flex flex-col bg-[#F9FAFB] py-12`}>
-      <div className="">
+    <div className={`flex flex-col bg-[${bgColor}] pb-10`}>
+      <div className="py-5 lg:py-12">
         <div className="text-[28px] lg:text-[40px] font-bold px-2 text-center font-sans">
           Why should you{" "}
           <span
@@ -56,8 +54,7 @@ const WhyPmFellowship = () => {
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 lg:gap-5 px-2 lg:px-16 py-4 lg:py-8">
         <div>
           <div
-            className={`bg-white rounded-2xl p-4 border border-2 hover:border-transparent items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
-            // className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+            className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
           >
             <div className={`flex mb-2 justify-center sm:justify-start`}>
               <img src={vector1} alt="" className="w-[70px] h-[70px]" />
@@ -82,8 +79,7 @@ const WhyPmFellowship = () => {
 
         <div>
           <div
-            className={`bg-white rounded-2xl p-4 border border-2 hover:border-transparent items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
-            // className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+            className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
           >
             <div className={`flex mb-2 justify-center sm:justify-start`}>
               <img src={vector3} alt="" className="w-[70px] h-[70px]" />
@@ -99,8 +95,7 @@ const WhyPmFellowship = () => {
 
         <div>
           <div
-            className={`bg-white rounded-2xl p-4 border border-2 hover:border-transparent items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
-            // className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
+            className={`bg-white rounded-2xl p-4 items-center justify-center text-center sm:text-start min-h-full hover:cursor-arrow transition-shadow duration-100 hover:shadow-[0_0px_18px_rgba(151,71,255,0.3)]`}
           >
             <div className={`flex mb-4 justify-center sm:justify-start`}>
               <img src={vector4} alt="" className="h-16 w-14 md:h-14" />

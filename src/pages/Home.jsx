@@ -12,7 +12,6 @@ import BottomBar from './../components/BottomBar';
 import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CourseSnapshot from "../components/CourseSnapshot";
-import Referral from "../components/Referral";
 
 const Home = () => {
   const [showBottomBar, setShowBottomBar] = useState(false);
@@ -44,23 +43,21 @@ const Home = () => {
           <meta name="description" content="Product Space is the premier platform to transition into Product Management. Our 10-week PM fellowship will help you upskill and ace interviews." />
         </Helmet>
         
-        <div className="bg-transparent py-5 max-w-screen-xl lg:py-12">
+        <div className="bg-transparent py-5 max-w-screen-xl lg:py-16">
           <HomeHeroSection />
         </div>
 
         <div className="w-full max-w-screen-2xl">
-          <Benefits />
-          <CourseSnapshot />
+          <Benefits bgColor={"#F7F0FF"} />
           <Companies />
         </div>
 
-        {/* <hr className="w-full max-w-screen-xl border-t-2" /> */}
+        <hr className="w-full max-w-screen-xl border-t-2" />
 
         <div className="w-full max-w-screen-2xl space-y-10 md:space-y-0">
           <Results />
           <Alumini />
           <CaseStudies1 />
-          <Referral />
           <NewsLetter />
           <Faq />
         </div>

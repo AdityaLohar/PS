@@ -67,9 +67,8 @@ const CaseStudies1 = () => {
   ];
 
   return (
-    // <div className="flex flex-col bg-[#F7F0FF] md:pt-8 md:pb-20 px-4 md:px-10 xl:px-20">
-    <div className="flex flex-col bg-[#F9FAFB] py-12 px-4 md:px-10 xl:px-20">
-      <div className="">
+    <div className="flex flex-col bg-[#F7F0FF] md:pt-8 md:pb-20 px-4 md:px-10 xl:px-20">
+      <div className="py-8">
         <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans">
           Product Tear-down & Case Studies
         </div>

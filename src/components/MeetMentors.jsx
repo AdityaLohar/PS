@@ -117,7 +117,14 @@ const MeetMentors = ({ bgColor }) => {
         </div>
       </div>
 
-
+          <div className="flex justify-center pt-6">
+            <button
+            // onClick={toggleModalEnquire}
+            className="md:w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
+          >
+            <p>Enroll Now</p>
+          </button>
+          </div>
     </div>
   );
 };

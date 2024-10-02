@@ -38,7 +38,7 @@ const StarRating = ({ rating }) => {
 const ReviewCard = ({ rating, title, desc, username, img, company, post, linkedin }) => {
   return (
     <div className="break-inside-avoid text-[16px]">
-      <div className="flex flex-col relative gap-2 bg-white hover:cursor-default border border-2 border-transparent hover:border-[#9A6DFF] shadow shadow-lg rounded-lg p-4">
+      <div className="flex flex-col relative gap-2 bg-white hover:cursor-default border border-2 border-transparent hover:border-[#C3C3C3] shadow shadow-lg rounded-lg p-4">
         
         <div className="flex items-center justify-between">
           <div>
@@ -80,7 +80,7 @@ const ReviewCardSmall = ({ rating, title, desc, username, img, company, post, li
 
   return (
     <div className="text-[16px] w-[80vw] md:w-[50vw]"> {/* Set width to 100vw */}
-      <div className="flex flex-col relative gap-2 bg-white border border-2 border-transparent hover:border-[#9A6DFF] shadow-lg rounded-lg p-4 py-6">
+      <div className="flex flex-col relative gap-2 bg-white border border-2 border-transparent hover:border-[#C3C3C3] shadow-lg rounded-lg p-4 py-6">
       <div className="flex items-center justify-between">
           <div>
             <div>
@@ -221,8 +221,7 @@ const reviews = [
 
 const ReviewPmFellowship = () => {
   return (
-    <div className="flex flex-col  bg-[#F9FAFB] pb-10 pt-4 lg:pt-0 px-4 md:px-10 xl:px-32">
-    {/* <div className="flex flex-col bg-[#F7F0FF] pb-10 pt-4 lg:pt-0 px-4 md:px-10 xl:px-32"> */}
+    <div className="flex flex-col bg-[#F5F5F5] pb-10 pt-4 lg:pt-0 px-4 md:px-10 xl:px-32">
       <div className="py-5 lg:py-12">
         <div className="text-[28px] lg:text-[40px] font-bold px-2 text-center md:text-start font-sans px-4">
           We have placed 350+ cohort members

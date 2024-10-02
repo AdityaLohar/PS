@@ -1,16 +1,52 @@
 import alumni from "../data/AlumniData";
-import AlumniCard from "./AlumniCard";
+import chevron from "../assets/chevron-double.svg";
 
-const Alumni = () => {
+const TransitionCard = ({
+  profile,
+  name,
+  curCompany,
+}) => {
   return (
-    <div className="flex flex-col bg-[#D7F5FF] pb-10">
+    <div
+      className="w-[220px] h-[266px] rounded-3xl bg-white p-4 flex flex-col items-center justify-between gap-4 bg-white"
+    >
+      <div className="flex flex-col items-center gap-3">
+        {/* Circular image */}
+        <div className="w-[100px] h-[100px] rounded-full overflow-hidden border border-1 border-white">
+          <img
+            src={profile}
+            alt="profile-picture"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Name below the image */}
+        <p className="text-[16px] font-sans font-bold text-center mt-3">
+          {name}
+        </p>
+      </div>
+
+      <div className="flex items-center h-[50px] justify-center w-full">
+        <img
+            src={curCompany}
+            className="h-12 w-auto"
+            alt="company"
+        />
+      </div>
+    </div>
+  );
+};
+
+const Transitions = () => {
+  return (
+    <div className="flex flex-col bg-[#F5F5F5] pb-10">
       <div className="py-5 lg:py-10">
         <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans px-4">
-          Our Successful Alumni
+          400+ Product Transitions in last 6 Months
         </div>
       </div>
 
-      <div className="h-[340px] overflow-y-hidden overflow-x-scroll mentor-scrollbar">
+      <div className="h-[270px] overflow-y-hidden overflow-x-scroll mentor-scrollbar">
       {/* <div className="h-[600px] overflow-x-scroll md:overflow-x-hidden mentor-scrollbar md:scroll-container"> */}
         <div
           className={`scroll-wrapper animate hover:cursor-default`}
@@ -25,7 +61,7 @@ const Alumni = () => {
                 key={`${alums.id}-${index}-${i}`}
                 className="scroll-item hover:cursor-pointer"
               >
-                <AlumniCard
+                <TransitionCard
                   profile={alums.profile}
                   name={alums.name}
                   prevCompany={alums.prevCompany}
@@ -44,4 +80,4 @@ const Alumni = () => {
   );
 };
 
-export default Alumni;
+export default Transitions;
