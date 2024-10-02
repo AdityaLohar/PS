@@ -134,6 +134,20 @@ const courseContent = [
         paytm,
         lazypay
       ]
+    },
+    {
+      week: "Placement Assistance",
+      title: "Get your profile to the hiring network",
+      desc: [
+        "1-1 Resume Review and Portfolio Improvement",
+        "Portfolio Completion (with trending templates)",
+        "Apply to the exclusive companies",
+        "Crack the interview process with end to end support",
+        "Congratulations! For successfully starting your new role as PM.",
+      ],
+      imgs: [
+        
+      ]
     }
   ];
   

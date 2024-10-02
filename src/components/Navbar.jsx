@@ -175,13 +175,13 @@ const Navbar = () => {
         ref={navigationRef}
         className="lg:hidden flex flex-col items-start h-[0px] px-[15px] md:px-[80px] space-y-4 py-0 transition-all duration-500 ease-in-out overflow-hidden"
       >
-        <a href="/pm-fellowship" className="hover:underline text-[18px]">
+        <a href="/pm-fellowship" className="hover:underline">
           PM Fellowship
         </a>
-        <a onClick={handleScrollOrNavigate} className="hover:underline text-[18px]">
+        <a onClick={handleScrollOrNavigate} className="hover:underline">
           Alumni
         </a>
-        <a href="/blogs" className="hover:underline text-[18px]">
+        <a href="/blogs" className="hover:underline">
           Blogs
         </a>
         <a onClick={toggleModal} className="hover:underline flex items-center gap-1">

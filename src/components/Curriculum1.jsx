@@ -23,14 +23,21 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
         onClick={onClick}
       >
         <div className="text-[18px] font-semibold text-black font-sans">
-          <h2 className="font-sans text-[18px] font-semibold  text-start">
-            <span className="text-[24px]">
-              {" "}
-              {title[0] === "0"
-                ? `0${+title[1]}`
-                : `${title[0] + title[1] + title[2]}`}{" "}
-            </span>
-            {title[0] === "0" ? title.slice(2) : title.slice(3)}
+          <h2 className="font-sans text-[14px] md:text-[18px] font-semibold  text-start">
+            {title[0] !== 'G' ? (
+              <div>
+                <span className="text-[20px] md:text-[24px]">
+                  {" "}
+                  {title[0] === "0"
+                    ? `0${+title[1]}`
+                    : `${title[0] + title[1] + title[2]}`}{" "}
+                </span>
+    
+                {title[0] === "0" ? title.slice(2) : title.slice(3)}
+              </div>
+            ) : (
+              title
+            )}
           </h2>
         </div>
 
@@ -73,20 +80,25 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
           ))}
         </div>
 
-        <div className="space-y-3 rounded-2xl">
-          <div className="font-bold text-[16px]">Case Studies</div>
-          <div className="flex gap-4">
-            {imgs.map((logo, index) => (
-              <div key={index}>
-                <img
-                  src={logo}
-                  alt=""
-                  className="object-contain w-24 h-16 rounded-md"
-                />
-              </div>
-            ))}
+        {title[0] !== 'G' ? (
+          <div className="space-y-3 rounded-2xl">
+            <div className="font-bold text-[16px]">Case Studies</div>
+            <div className="flex gap-4">
+              {imgs.map((logo, index) => (
+                <div key={index}>
+                  <img
+                    src={logo}
+                    alt=""
+                    className="object-contain w-24 h-16 rounded-md"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
+
       </div>
     </div>
   );
@@ -134,7 +146,7 @@ const Curriculum1 = () => {
 
   return (
     <div className="flex flex-col px-4 xl:px-20">
-      <div className="py-5 lg:py-14 flex flex-col md:flex-row px-10 justify-between">
+      <div className="py-5 lg:py-14 flex flex-col md:flex-row md:px-10 justify-between">
 
         <div className="w-full md:w-2/3 space-y-4 md:space-y-2">
           <div className="text-[28px] lg:text-[40px] font-bold font-sans">
@@ -149,9 +161,6 @@ const Curriculum1 = () => {
               You will have to commit to investing 6 to 8 hours of dedicated
               time to this program every week.
             </p>
-            {/* Progress through weekly segments that build your product
-              management skills, from strategy to hands-on projects, preparing
-              you for real-world challenges. */}
           </div>
         </div>
 
@@ -177,7 +186,7 @@ const Curriculum1 = () => {
             </div>
           </div>
 
-          <div>
+          <div className="flex justify-center">
             <button
             onClick={toggleModal}
             className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold p-4 rounded-full flex justify-center items-center gap-2"
@@ -189,7 +198,7 @@ const Curriculum1 = () => {
         </div>
       </div>
 
-      <div className="flex justify-around">
+      <div className="hidden lg:flex justify-around">
         <div className="flex relative">
           <img src={greenArrow} alt="" className="absolute -left-6" />
           <img src={smallCommitment} alt="" />

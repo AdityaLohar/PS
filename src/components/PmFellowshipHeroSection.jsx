@@ -61,7 +61,7 @@ const PmFellowshipHeroSection = () => {
 
   return (
     <div
-      className="bg-transparent pt-8 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-32 font-hind"
+      className="bg-transparent pt-2 pb-16 px-4 md:px-10 xl:px-48 py-2 md:py-8 lg:py-20 font-hind"
       style={{
         backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
         backgroundPosition: "bottom center, bottom right -10%, bottom left -5%",
@@ -70,8 +70,8 @@ const PmFellowshipHeroSection = () => {
         transition: "background-image 0.3s ease-in-out"
       }}
     >
-      <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-12 items-center justify-between gap-6 md:gap-8 lg:gap-12 border border-1 border-[#00B5CE] rounded-[24px] md:rounded-[32px] px-4 md:px-12 lg:px-20">
-        <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-1/2">
+      <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-8 items-center justify-between gap-6 md:gap-8 lg:gap-12 border border-1 border-[#00B5CE] rounded-[24px] md:rounded-[32px] px-4 md:px-8">
+        <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-[57%]">
           <div className="flex flex-col gap-1">
             <div>
               <h1 className="text-[24px] md:text-[28px] lg:text-[36px] font-bold font-sans">
@@ -91,6 +91,30 @@ const PmFellowshipHeroSection = () => {
             <div>
               <div className="text-[16px]">Duration</div>
               <div className="font-semibold text-[#00B5CE]">10 Weeks</div>
+            </div>
+          </div>
+
+          <div className="text-[16px] hidden md:flex flex-col gap-4 md:gap-0 md:flex-row bg-[#D7F5FF] rounded-xl p-3">
+            <div className="flex w-full">
+              <div className="flex flex-col gap-2 w-full pr-2 pl-2">
+                <div className="font-semibold">Live</div>
+                <div>Sessions on Zoom</div>
+              </div>
+              <div className="flex flex-col gap-2 w-full pl-4 pr-4 border-l-2 border-[#00B5CE]">
+                <div className="font-semibold">10 Weeks</div>
+                <div>Fellowship Timeline</div>
+              </div>
+            </div>
+
+            <div className="flex w-full">
+              <div className="flex flex-col gap-2 w-full pl-2 md:pl-4 pr-2 md:border-l-2 border-[#00B5CE]">
+                <div className="font-semibold">Mentorship</div>
+                <div>With Experienced PM&apos;s</div>
+              </div>
+              <div className="flex flex-col gap-2 w-full pl-4 pr-4 border-l-2 border-[#00B5CE]">
+                <div className="font-semibold">Placement</div>
+                <div>Support for 1 Year</div>
+              </div>
             </div>
           </div>
 
@@ -161,6 +185,30 @@ const PmFellowshipHeroSection = () => {
               Download Curriculum
           </button>
         </div>
+
+        <div className="text-[16px] flex flex-col md:hidden gap-4 md:gap-0 md:flex-row bg-[#D7F5FF] rounded-xl p-3">
+            <div className="flex w-full">
+              <div className="flex flex-col gap-2 w-full pr-2 pl-2">
+                <div className="font-semibold">Live</div>
+                <div>Sessions on Zoom</div>
+              </div>
+              <div className="flex flex-col gap-2 w-full pl-4 pr-4 border-l-2 border-[#00B5CE]">
+                <div className="font-semibold">10 Weeks</div>
+                <div>Fellowship Timeline</div>
+              </div>
+            </div>
+
+            <div className="flex w-full">
+              <div className="flex flex-col gap-2 w-full pl-2 md:pl-4 pr-2 md:border-l-2 border-[#00B5CE]">
+                <div className="font-semibold">Mentorship</div>
+                <div>With Experienced PM&apos;s</div>
+              </div>
+              <div className="flex flex-col gap-2 w-full pl-4 pr-4 border-l-2 border-[#00B5CE]">
+                <div className="font-semibold">Placement</div>
+                <div>Support for 1 Year</div>
+              </div>
+            </div>
+          </div>
 
         <div className="relative">
         {/* Modal */}
