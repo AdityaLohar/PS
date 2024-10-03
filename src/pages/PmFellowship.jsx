@@ -69,7 +69,7 @@ const PmFellowship = () => {
           <Companies />
           <ResultsPmFellowship />
           <CourseSnapshot />
-          <StructureOfPmFellowship />
+          {/* <StructureOfPmFellowship /> */}
           <Curriculum1 />
           <HandsOnTools />
           <WhyPmFellowship bgColor={"#F5F5F5"} />

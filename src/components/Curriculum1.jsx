@@ -198,10 +198,10 @@ const Curriculum1 = () => {
         </div>
       </div>
 
-      <div className="hidden lg:flex justify-around">
-        <div className="flex relative">
-          <img src={greenArrow} alt="" className="absolute -left-6" />
-          <img src={smallCommitment} alt="" />
+      <div className="hidden lg:flex justify-around relative pb-6">
+        <div className="flex absolute -top-12 left-[23%]">
+          <img src={greenArrow} alt="" className="absolute -top-6" />
+          <img src={smallCommitment} alt="" className="" />
         </div>
         <div className="text-transparent">A</div>
       </div>
