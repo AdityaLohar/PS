@@ -168,13 +168,13 @@ const Curriculum1 = () => {
           <div className="flex justify-around gap-4 xl:gap-12">
             <div className="text-hind font-medium">
               <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">
-                5
+                10
               </p>
               <p>Weeks</p>
             </div>
             <div className="text-hind font-medium">
               <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">
-                40+
+                80+
               </p>
               <p>Hours</p>
             </div>
