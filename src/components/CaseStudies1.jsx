@@ -140,6 +140,8 @@ const CaseStudies1 = () => {
                   newBoxes[selectedBox],
                 ];
                 setSelectedBox(index);
+                
+                window.open(boxes[index].url, '_blank', 'noopener, noreferrer');
               }}
               className="col-span-1 row-span-1 hover:shadow-[1px_5px_10px_rgba(0,0,0,0.4)] 
                 custom-5:h-[170px] custom-5:w-[170px] 

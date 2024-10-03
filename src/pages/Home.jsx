@@ -57,9 +57,9 @@ const Home = () => {
         <div className="w-full max-w-screen-2xl space-y-10 md:space-y-0">
           <Results />
           <Alumini />
+          <MeetMentors bgColor={"#F5F5F5"} />
           <CaseStudies1 />
           <NewsLetter />
-          <Faq />
         </div>
         
         {/* <div className="w-full bg-black lg:pb-16 max-w-screen-2xl">
