@@ -42,48 +42,48 @@ const DropdownList = ({ len, flag }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const questions = [
-        "What is Product Space?",
-        "Who is Product Space for?",
-        "What programs does Product Space offer?",
-        "How do I enroll in a cohort?",
-        "What is included in a Product Space cohort?",
-        "How long is each cohort program?",
-        "What kind of support can I expect during the cohort?",
-        "Do I need prior experience in product management to join?",
-        "What happens after I complete the cohort?",
-        "How can I access the resources and interview guides?",
-        "Is there a payment plan available?",
-        "Can I get a refund if I am unable to complete the program?",
-        "How can I contact support?",
-      ];
+      "What is the Product Space Product Management Fellowship?",
+      "Who is eligible to apply for the Product Space Fellowship?",
+      "How much does the Product Space Fellowship cost? Are there hidden fees?",
+      "What if I miss a live session?",
+      "What benefits do I get as a Fellow?",
+      "I'm a UG/PG student. Can I still apply?",
+      "What resources and support will I have access to during the fellowship?",
+      "How often do new cohorts start?",
+      "What type of roles can I apply for after completing the fellowship?",
+      "Do I need prior work experience to be eligible for job interviews?",
+      "Which companies hire from the Product Space Fellowship?",
+      "What if I need to withdraw from the program? Is there a refund policy?",
+      "Is the Product Space Fellowship worth it?"
+    ];
+    
+    const contents = [
+      "Our Product Management Fellowship is a 10-week intensive online program designed to help you kickstart or transition into a product management career. Delivered through live sessions on Teams, our fellowship is led by experienced industry professionals and product leaders from top companies. You'll learn PM fundamentals, tackle real-world case studies, and receive personalized feedback and mentorship.",
       
-      const contents = [
-        "Product Space is an ed-tech platform offering comprehensive programs, resources, and mentorship to help individuals transition into or advance their careers in product management.",
-        
-        "Product Space is designed for aspiring product managers, current product professionals looking to upskill, and individuals transitioning from other fields like operations, finance, or marketing into product management.",
-        
-        "We offer various cohorts, including Product Management Fellowships and hands-on mentorship from industry leaders.",
-        
-        "To enroll, simply visit our Cohort Page and follow the steps to sign up. You will be guided through the process to select the cohort that best fits your career goals.",
-        
-        "Each cohort includes live sessions with product experts, hands-on case studies, real-world projects, interview preparation, and ongoing mentorship to help you become a successful product manager.",
-        
-        "Our cohorts typically last 8-12 weeks, depending on the program. Specific timelines can be found on the respective cohort pages.",
-        
-        "You will receive continuous guidance from mentors, access to a community of peers, personalized feedback on assignments, and exclusive resources designed to help you succeed.",
-        
-        "No prior experience is necessary. Our programs are designed for beginners as well as professionals looking to enhance their product management skills.",
-        
-        "Upon completing the cohort, you will receive a certificate, continued access to our alumni network, and the opportunity to participate in job placement support.",
-        
-        "Resources and interview guides will be available after your cohort completion or as part of our stand-alone product offerings. Stay tuned for updates!",
-        
-        "Yes, we offer flexible payment plans to make our programs accessible to everyone. Details can be found on the payment section of the cohort page.",
-        
-        "We offer refunds within a certain time frame before the cohort begins. Please refer to our refund policy for more details.",
-        
-        "You can reach out to our support team via email at support@productspace.com or through our contact form on the website.",
-      ];
+      "Anyone with a passion for product management can apply! Whether you're a student, working professional, or looking for a career switch, we welcome applicants from all backgrounds. No specific degree, CGPA, or prior experience is required.",
+      
+      "The fellowship has a one-time enrollment fee. There are no hidden costs—everything you need to succeed is included in this fee, from live sessions to placement support.",
+      
+      "No worries! All live sessions are recorded and shared with fellows, so you can catch up at your convenience. That said, we encourage attending live sessions for maximum engagement, as they're designed to be interactive and packed with opportunities to ask questions.",
+      
+      "As a Product Space Fellow, you'll receive:\n- Expert instruction from seasoned product managers.\n- Hands-on learning with real-world case studies.\n- Comprehensive placement support with access to mock interviews, alumni connections, and hiring managers.\n- Exclusive resources and tools to help you succeed in the PM world.",
+      
+      "Absolutely! We welcome pre-final year students who are eager to learn and build their careers early. This fellowship can give you a head start in the product management field.",
+      
+      "You'll receive:\n- Weekly live sessions with industry experts.\n- Access to exclusive learning materials, tools, and weekly challenges based on real-world scenarios.",
+      
+      "We have a new cohort starting every 1.5 months. Stay tuned for our next opening!",
+      
+      "Upon completion, you'll be ready to apply for full-time product management roles or internships at top companies. Whether you're a student or a working professional, this fellowship will make you eligible for PM, APM, and product internships across industries.",
+      
+      "Nope! Completing your weekly milestones and final project with a passing grade is all it takes to be eligible for interviews.",
+      
+      "We partner with a diverse range of companies, from startups to established enterprises. Our hiring partners include over 310 companies, and new companies/startups are added with each cohort.",
+      
+      "Refunds can be requested up to two weeks before the fellowship start date. We'll issue a full refund if the reason is valid. Requests made after the deadline will be reviewed at the discretion of our team.",
+      
+      "If you're serious about launching your product management career, the fellowship offers the perfect blend of knowledge, mentorship, and placement support. But don't take our word for it—check out our success stories from alumni who've landed their dream PM roles!"
+    ];
       
 
       const handleToggle = (index) => {

@@ -1,5 +1,7 @@
 import downloadLogo from "../assets/download.svg";
 import greenArrow from "../assets/green-arrow.svg";
+import greenBox from "../assets/green-box.svg";
+import greenArrowDown from "../assets/green-arrow-down.svg";
 import smallCommitment from "../assets/small-commitment.svg";
 import courseContent from "../data/CourseContent";
 import tick from "../assets/tick-green.svg";
@@ -165,6 +167,10 @@ const Curriculum1 = () => {
         </div>
 
         <div className="flex flex-col gap-6 justify-between pt-4">
+          <div className="flex md:hidden justify-end relative">
+              <img src={greenBox} alt="" className="h-1/2 w-1/2" />
+          </div>
+
           <div className="flex justify-around gap-4 xl:gap-12">
             <div className="text-hind font-medium">
               <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">

@@ -17,6 +17,10 @@ import Faq from './../components/Faq';
 import StructureOfPmFellowship from "../components/StructureOfPmFellowship";
 import BottomBar from "../components/BottomBar";
 
+import disco3 from "../assets/disco-lights1.png";
+import disco2 from "../assets/disco-lights2.png";
+import disco1 from "../assets/disco-lights3.png";
+
 const PmFellowship = () => {
   const sectionRef = useRef(null);
   const location = useLocation();

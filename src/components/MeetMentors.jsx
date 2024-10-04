@@ -142,7 +142,7 @@ const MeetMentors = ({ bgColor }) => {
       </div> */}
 
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10">
           {mentors.map((mentor, index) => (
             <div key={`${mentor.id}-${index}`} className="mentor-card">
               <MentorCard1
