@@ -37,7 +37,7 @@ const NewsLetter = () => {
   };
 
   return (
-    <div className="flex flex-col bg-[#F5F5F5] pb-6 lg:pb-20 lg:pt-16">
+    <div className="flex flex-col bg-[#F5F5F5] pb-20 pt-16">
       <div className="py-6 lg:pb-8">
         <div className="text-[24px] lg:text-[40px] font-bold text-center font-sans px-4">
           Subscribe to our Newsletter
