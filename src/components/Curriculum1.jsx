@@ -145,17 +145,17 @@ const Curriculum1 = () => {
   };
 
   return (
-    <div className="flex flex-col px-4 xl:px-20">
+    <div className="flex flex-col pt-2 lg:pt-0 px-4 xl:px-20">
       <div className="py-5 lg:py-14 flex flex-col md:flex-row md:px-10 justify-between">
 
         <div className="w-full md:w-2/3 space-y-4 md:space-y-2">
-          <div className="text-[28px] lg:text-[40px] font-bold font-sans">
+          <div className="text-[24px] lg:text-[40px] font-bold font-sans text-center lg:text-start">
           How your curriculum will look like 
           what you will learn
           </div>
           <div className="text-[16px]">
             <p>
-              A sneak peak into what you will learn in our 10-week curriculum.
+              A sneak peak into what you will learn in our 10 week curriculum.
             </p>
             <p>
               You will have to commit to investing 6 to 8 hours of dedicated
@@ -189,7 +189,7 @@ const Curriculum1 = () => {
           <div className="flex justify-center">
             <button
             onClick={toggleModal}
-            className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold p-4 rounded-full flex justify-center items-center gap-2"
+            className="w-[300px] bg-[#FFC303] text-[16px] lg:text-[18px] text-black font-semibold p-4 rounded-full flex justify-center items-center gap-2"
           >
             <img src={downloadLogo} alt="" />
             <p>Download Curriculum</p>
@@ -222,13 +222,13 @@ const Curriculum1 = () => {
       <div className="flex flex-col items-center justify-center pt-14 gap-4">
         <button
           onClick={toggleModalEnquire}
-          className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
+          className="w-[300px] bg-[#FFC303] text-[16px] lg:text-[18px] text-black font-semibold py-4 rounded-full"
         >
           <p>Enroll Now</p>
         </button>
         <button
           onClick={toggleModal}
-          className="w-[300px] bg-white text-[18px] text-black font-semibold p-3 rounded-full flex justify-center items-center gap-2"
+          className="w-[300px] bg-white text-[16px] lg:text-[18px] text-black font-semibold p-3 rounded-full flex justify-center items-center gap-2"
         >
           <img src={downloadLogo} alt="" />
           <p>Download Curriculum</p>

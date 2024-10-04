@@ -221,9 +221,9 @@ const reviews = [
 
 const ReviewPmFellowship = () => {
   return (
-    <div className="flex flex-col bg-[#F5F5F5] pb-10 pt-4 lg:pt-0 px-4 md:px-10 xl:px-32">
+    <div className="flex flex-col bg-[#F5F5F5] pb-5 pt-3 lg:pt-0 px-4 md:px-10 xl:px-32">
       <div className="py-5 lg:py-12">
-        <div className="text-[28px] lg:text-[40px] font-bold px-2 text-center md:text-start font-sans px-4">
+        <div className="text-[24px] lg:text-[40px] font-bold px-2 text-center md:text-start font-sans px-4">
           We have placed 350+ cohort members
         </div>
         
@@ -262,7 +262,7 @@ const ReviewPmFellowship = () => {
 
         <div className="flex justify-center font-semibold">
           <a href="https://topmate.io/propel/1232054 " target="_blank" className="flex justify-center w-full md:w-2/5 lg:w-1/3">
-            <button className="w-[300px] text-[20px] bg-[#FFC303] hover:bg-yellow-500 text-black p-2 py-3 px-6 md:p-3 rounded-full mt-6">
+            <button className="w-[300px] text-[16px] lg:text-[18px] bg-[#FFC303] hover:bg-yellow-500 text-black p-2 py-3 px-6 md:p-3 rounded-full mt-6">
                 Meet with Alums
             </button>
           </a>

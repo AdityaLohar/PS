@@ -102,9 +102,9 @@ const DropdownList = ({ len, flag }) => {
 
 const FaqPmFellowship = () => {
   return (
-    <div className="flex flex-col bg-[#F5F5F5] pb-20">
+    <div className="flex flex-col bg-[#F5F5F5] pt-3 lg:pt-0 pb-20">
       <div className="py-5 lg:py-8">
-        <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans px-4">
+        <div className="text-[24px] lg:text-[40px] font-bold text-center font-sans px-4">
           Frequently Asked Questions
         </div>
       </div>

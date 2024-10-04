@@ -89,11 +89,11 @@ const MeetMentors = ({ bgColor }) => {
 
   return (
     <div
-      className={`flex flex-col pb-10 `}
+      className={`flex flex-col pt-2 lg:pt-0 pb-10 `}
       style={{ backgroundColor: bgColor }}
     >
       <div className="py-5 lg:py-10">
-        <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans">
+        <div className="text-[24px] lg:text-[40px] font-bold text-center font-sans">
           Meet our Mentors
         </div>
         <div className="text-[14px] lg:text-[16px] text-center text-gray-700 font-medium px-4 xl:px-60 pt-2 pb-1">
@@ -144,7 +144,7 @@ const MeetMentors = ({ bgColor }) => {
       <div className="flex justify-center pt-6">
         <button
           onClick={toggleModal}
-          className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
+          className="w-[300px] bg-[#FFC303] text-[16px] lg:text-[18px] text-black font-semibold py-4 rounded-full"
         >
           <p>Enroll Now</p>
         </button>

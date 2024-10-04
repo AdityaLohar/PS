@@ -41,12 +41,12 @@ const ResultCard = ({ id, flag, number, title, desc }) => {
     >
       <div>
         {id == 2 || id == 4 ? "" : "₹"}{" "}
-        <span className="text-[28px] md:text-[40px] font-semibold">
+        <span className="text-[24px] lg:text-[40px] font-semibold">
           {isVisible && <CountUp start={0} end={number} duration={5} />}
         </span>{" "}
         {title[0] === "." ? (
           <span>
-            <span className="text-[28px] md:text-[40px] font-semibold">
+            <span className="text-[24px] lg:text-[40px] font-semibold">
               {title[0] + title[1]}
             </span>
             <span> X</span>
@@ -75,14 +75,14 @@ const ResultsPmFellowship = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 mb-10 lg:mb-12">
+    <div className="flex flex-col gap-8 mb-2 lg:mb-12">
       <div className="mx-4 md:mx-10 lg:mx-20 py-4 lg:py-8 px-2 lg:px-10 mt-6 lg:mt-12 border-2 border-[#C3C3C3] bg-[#F5F5F5] rounded-xl">
         <div className="flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-16 justify-between py-4 items-center">
-          <div className="text-[28px] lg:text-[32px] font-semibold w-full lg:w-1/4 text-center lg:text-start font-sans">
+          <div className="text-[24px] lg:text-[32px] font-bold w-full lg:w-1/4 text-center lg:text-start font-sans">
             Placement Stats
           </div>
 
-          <div className="flex gap-4 justify-between w-full md:w-auto md:justify-around items-center xl:gap-0 text-center">
+          <div className="flex gap-4 justify-between w-full md:w-auto md:justify-around items-center font-sans xl:gap-0 text-center">
             <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
               <ResultCard
                 id={1}
@@ -123,7 +123,7 @@ const ResultsPmFellowship = () => {
       <div className="flex justify-center">
         <button
           onClick={toggleModal}
-          className="bg-[#FFC303] font-semibold text-[18px] p-4 rounded-full w-[300px] md:w-[300px]"
+          className="bg-[#FFC303] font-semibold text-[16px] lg:text-[18px] p-4 rounded-full w-[300px] md:w-[300px]"
         >
           You can be <span className="font-bold">NEXT</span>
         </button>
