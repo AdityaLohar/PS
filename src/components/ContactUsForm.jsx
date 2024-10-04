@@ -133,7 +133,7 @@ const ContactUsForm = () => {
             }`}
           >
             {/* Form content */}
-            <div className="bg-white p-12 rounded-3xl shadow-lg relative w-[300px] custom-3:w-[400px] lg:w-[500px] transform transition-transform duration-300 ease-out">
+            <div className="bg-white p-6 py-12 lg:p-12 rounded-3xl shadow-lg relative w-[300px] custom-3:w-[400px] lg:w-[500px] transform transition-transform duration-300 ease-out">
               {/* Close button */}
               <button
                 onClick={toggleModal}
@@ -194,7 +194,7 @@ const ContactUsForm = () => {
                 <div className="flex flex-col items-center">
                   <button
                     onClick={handleSubmit}
-                    className="text-[14px] lg:text-[20px] w-full bg-[#FEC923] text-black font-semibold p-2 md:px-6 md:py-4 rounded-full hover:bg-yellow-500"
+                    className="text-[14px] lg:text-[20px] w-full bg-[#FEC923] text-black font-semibold p-4 md:px-6 md:py-4 rounded-full hover:bg-yellow-500"
                   >
                     {loading ? "Loading..." : "Submit"}
                   </button>
