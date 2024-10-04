@@ -192,19 +192,21 @@ const CaseStudies1 = () => {
                 {boxes[selectedBox].title}
               </div>
             </div>
-            <div className="bg-[rgba(0,0,0,0.7)] border border-2 border-white rounded-2xl text-white p-3 m-3 font-hind space-y-2">
-              <div className="text-[20px] md:text-[24px] font-semibold pr-4">
-                Improving {boxes[selectedBox].title} Viewing Experience
-              </div>
-              <div className="text-[14px] md:text-[16px] font-normal pr-4">
-                A sneak peek into what you will learn in our 10-week curriculum.
-              </div>
-              <div className="flex justify-end">
-                <div className="text-[10px] md:text-[12px] font-normal">
-                  Published on: 25th May 24
+            <a href={boxes[selectedBox]?.url} target="_blank">
+              <div className="bg-[rgba(0,0,0,0.7)] border border-2 border-white rounded-2xl text-white p-3 m-3 font-hind space-y-2">
+                <div className="text-[20px] md:text-[24px] font-semibold pr-4">
+                  Improving {boxes[selectedBox].title} Viewing Experience
+                </div>
+                <div className="text-[14px] md:text-[16px] font-normal pr-4">
+                  A sneak peek into what you will learn in our 10-week curriculum.
+                </div>
+                <div className="flex justify-end">
+                  <div className="text-[10px] md:text-[12px] font-normal">
+                    Published on: 25th May 24
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         )}
 
