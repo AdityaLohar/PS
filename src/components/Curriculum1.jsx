@@ -180,15 +180,15 @@ const Curriculum1 = () => {
             </div>
             <div className="text-hind font-medium">
               <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">
-                80+
+                60+
               </p>
               <p>Hours</p>
             </div>
             <div className="text-hind font-medium">
               <p className="text-[28px] lg:text-[40px] text-black font-semibold font-sans">
-                100+
+                10+
               </p>
-              <p>Classes</p>
+              <p>live projects</p>
             </div>
           </div>
 

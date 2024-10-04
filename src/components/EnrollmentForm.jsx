@@ -135,11 +135,10 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
               {/* Form */}
               <div>
                 <h2 className="text-[25px] md:text-[34px] font-bold mb-4 font-sans text-center">
-                  PM Fellowship Waitlist
+                Enroll in the PM Fellowship Program
                 </h2>
                 <h3 className="text-[14px] md:text-[16px] mb-4 text-center">
-                Personalized Guidance | Interview Preparation | Industry Focus Content | Job Placements Support -{" "}
-                  <span className="font-bold">All at one place</span>
+                Sub-Heading -Excel in Your Product Management Career with practical learning, 1-1 mentorship and placement assistance.
                 </h3>
 
                 <div className="mb-4">
@@ -177,7 +176,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
                     onClick={handleSubmit}
                     className="text-[14px] lg:text-[20px] w-full bg-[#FEC923] text-black font-semibold p-4 md:px-6 md:py-4 rounded-full hover:bg-yellow-500"
                   >
-                    {loading ? "Loading..." : "Submit"}
+                    {loading ? "Loading..." : "Begin Your PM Career"}
                   </button>
                   <div className="text-[12px] md:text-[16px] p-2 py-3 font-semibold">
                     <p>Get 1-1 mentorship via our PM Fellowship cohort</p>

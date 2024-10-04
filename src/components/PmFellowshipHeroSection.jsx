@@ -81,7 +81,7 @@ const PmFellowshipHeroSection = () => {
           <div className="flex flex-col gap-3 text-center lg:text-start">
             <div>
               <h1 className="text-[24px] md:text-[28px] lg:text-[40px] font-bold font-sans">
-                Product Management Fellowship Program
+                Product Management <br /> Fellowship Program
               </h1>
             </div>
             <div className="text-[18px]">Excel in Your Product Career</div>
