@@ -70,7 +70,6 @@ const PmFellowship = () => {
         <div className="w-full max-w-screen-2xl">
           <PmFellowshipHeroSection />
           <Transitions />
-          <Companies />
           <ResultsPmFellowship />
           <CourseSnapshot />
           {/* <StructureOfPmFellowship /> */}
@@ -81,6 +80,7 @@ const PmFellowship = () => {
           <div ref={sectionRef} id="reviews">
             <ReviewPmFellowship />
           </div>
+          <Companies />
           <MeetAlums />
           <FaqPmFellowship />
           {showBottomBar && <BottomBar />}
