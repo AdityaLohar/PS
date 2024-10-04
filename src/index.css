@@ -43,6 +43,16 @@ body {
   }
 }
 
+.pm-hero-gradient-bg {
+  background: linear-gradient(to bottom, white 67%, #D7F5FF 60%);
+}
+
+@media (min-width: 1024px) {
+  .pm-hero-gradient-bg {
+    background: linear-gradient(to bottom, white 57%, #D7F5FF 50%); /* Adjust as needed */
+  }
+}
+
 .input::placeholder {
   font-weight: normal; /* Set placeholder font weight to normal */
 }
