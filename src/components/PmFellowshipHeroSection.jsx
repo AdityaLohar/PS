@@ -65,7 +65,7 @@ const PmFellowshipHeroSection = () => {
 
   return (
     <div
-      className="bg-transparent md:px-10 xl:px-28 md:py-8 lg:pt-20 lg:pb-32 font-hind"
+      className="bg-transparent md:px-10 xl:px-28 md:py-8 lg:pt-20 lg:pb-20 font-hind"
       style={
         {
           // backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
