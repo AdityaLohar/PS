@@ -262,7 +262,7 @@ const ReviewPmFellowship = () => {
 
         <div className="flex justify-center font-semibold">
           <a href="https://topmate.io/propel/1232054 " target="_blank" className="flex justify-center w-full md:w-2/5 lg:w-1/3">
-            <button className="w-[300px] text-[16px] lg:text-[18px] bg-[#FFC303] hover:bg-yellow-500 text-black p-2 py-3 px-6 md:p-3 rounded-full mt-6">
+            <button className="w-[300px] text-[18px] bg-[#FFC303] hover:bg-yellow-500 text-black p-2 py-3 px-6 md:p-3 rounded-full mt-6">
                 Meet with Alums
             </button>
           </a>

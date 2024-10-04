@@ -3,9 +3,9 @@ import AlumniCard from "./AlumniCard";
 
 const Alumni = () => {
   return (
-    <div className="flex flex-col bg-white pb-10">
+    <div className="flex flex-col bg-white pb-0 lg:pb-16">
       <div className="py-5 lg:py-10">
-        <div className="text-[28px] lg:text-[40px] font-bold text-center font-sans px-4">
+        <div className="text-[24px] lg:text-[40px] font-bold text-center font-sans px-4">
           Our Successful Alumni
         </div>
       </div>

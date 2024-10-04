@@ -51,7 +51,7 @@ const Blog = () => {
   
         {/* Render the post content (headings, paragraphs, etc.) */}
         <div
-          className="prose prose-lg text-[16px] lg:text-[18px] font-sans"
+          className="prose prose-lg text-[18px] font-sans"
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}  // This renders the HTML content including subheadings
         />
       </div>

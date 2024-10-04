@@ -62,7 +62,7 @@ const ResultsCard = ({ iconImg, number, title, subTitle, duration }) => {
 const Results = () => {
 
   return (
-    <div className="flex flex-col bg-white pb-5 md:pb-10 bg-red-200 gap-8">
+    <div className="flex flex-col bg-white pb-0 md:pb-10 bg-red-200 gap-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-around px-2 md:px-22 xl:px-28 pt-10">
         <ResultsCard
           iconImg={placed}
@@ -91,7 +91,7 @@ const Results = () => {
         <Link to={"/pm-fellowship"}>
           <button
             // onClick={toggleModal}
-            className="text-[18px] w-[300px] bg-[#FEC923] text-black py-2.5 px-4 xl:px-16 rounded-full hover:shadow-[5px_5px_0_rgba(245,133,119)] transform hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 ease-in-out"
+            className="text-[18px] w-[300px] bg-[#FEC923] text-black p-4 xl:px-16 rounded-full hover:shadow-[5px_5px_0_rgba(245,133,119)] transform hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 ease-in-out"
           >
             Get Started!
           </button>

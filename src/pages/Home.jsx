@@ -43,7 +43,7 @@ const Home = () => {
           <meta name="description" content="Product Space is the premier platform to transition into Product Management. Our 10-week PM fellowship will help you upskill and ace interviews." />
         </Helmet>
         
-        <div className="bg-transparent py-5 max-w-screen-xl lg:py-16">
+        <div className="bg-transparent py-2 max-w-screen-xl lg:py-16">
           <HomeHeroSection />
         </div>
 

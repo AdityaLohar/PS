@@ -39,7 +39,7 @@ const TransitionCard = ({
 
 const Transitions = () => {
   return (
-    <div className="flex flex-col bg-[#F5F5F5] pt-3 pb-10">
+    <div className="flex flex-col bg-[#F5F5F5] pt-3 pb-10 lg:pb-16">
       <div className="py-5 lg:py-10">
         <div className="text-[24px] lg:text-[40px] font-bold text-center font-sans px-4">
           400+ Product Transitions in last 6 Months

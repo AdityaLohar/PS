@@ -18,7 +18,7 @@ const MeetAlums = () => {
 
         <div className="flex flex-col md:flex-row gap-3 items-center justify-center lg:justify-start font-semibold">
         <a href="https://topmate.io/propel/62841" target="_blank" className="w-3/4 md:w-1/2">
-            <button className="w-full text-[16px] lg:text-[20px] bg-[#FFC303] hover:bg-yellow-500 text-black p-2 py-3 px-6 md:p-3 rounded-full mt-6">
+            <button className="w-full text-[18px] bg-[#FFC303] hover:bg-yellow-500 text-black p-2 py-3 px-6 md:p-3 rounded-full mt-6">
                 Meet 1:1 with Mentors
             </button>
           </a>

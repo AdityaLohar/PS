@@ -189,7 +189,7 @@ const Curriculum1 = () => {
           <div className="flex justify-center">
             <button
             onClick={toggleModal}
-            className="w-[300px] bg-[#FFC303] text-[16px] lg:text-[18px] text-black font-semibold p-4 rounded-full flex justify-center items-center gap-2"
+            className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold p-4 rounded-full flex justify-center items-center gap-2"
           >
             <img src={downloadLogo} alt="" />
             <p>Download Curriculum</p>
@@ -222,13 +222,13 @@ const Curriculum1 = () => {
       <div className="flex flex-col items-center justify-center pt-14 gap-4">
         <button
           onClick={toggleModalEnquire}
-          className="w-[300px] bg-[#FFC303] text-[16px] lg:text-[18px] text-black font-semibold py-4 rounded-full"
+          className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
         >
           <p>Enroll Now</p>
         </button>
         <button
           onClick={toggleModal}
-          className="w-[300px] bg-white text-[16px] lg:text-[18px] text-black font-semibold p-3 rounded-full flex justify-center items-center gap-2"
+          className="w-[300px] bg-white text-[18px] text-black font-semibold p-3 rounded-full flex justify-center items-center gap-2"
         >
           <img src={downloadLogo} alt="" />
           <p>Download Curriculum</p>
