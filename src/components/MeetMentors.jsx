@@ -107,7 +107,7 @@ const MeetMentors = ({ bgColor }) => {
         </div>
       </div>
 
-      <div
+      {/* <div
         className="overflow-x-auto md:overflow-hidden hover:cursor-default mentor-scrollbar md:scroll-container"
         onMouseEnter={() =>
           document.documentElement.style.setProperty(
@@ -139,9 +139,28 @@ const MeetMentors = ({ bgColor }) => {
             ))
           )}
         </div>
+      </div> */}
+
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12">
+          {mentors.map((mentor, index) => (
+            <div key={`${mentor.id}-${index}`} className="mentor-card">
+              <MentorCard1
+                id={mentor.id}
+                profile={mentor.profile}
+                name={mentor.name}
+                company={mentor.company}
+                post={mentor.post}
+                linkedIn={mentor.linkedIn}
+                img={mentor.img}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="flex justify-center pt-6">
+
+      <div className="flex justify-center pt-6 lg:pt-12">
         <button
           onClick={toggleModal}
           className="w-[300px] bg-[#FFC303] text-[18px] text-black font-semibold py-4 rounded-full"
