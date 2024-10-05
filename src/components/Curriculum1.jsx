@@ -21,12 +21,12 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
       <div
         className={`flex md:justify-between items-center cursor-pointer transition-all duration-500 ease-in-out ${
           isOpen ? "rounded-t-md" : "rounded-md"
-        } bg-[#E6E6E6] p-5`}
+        } ${title[2] !== 'Y' ? "bg-[#E6E6E6]" : "bg-[#AEECFF]" } p-5`}
         onClick={onClick}
       >
         <div className="text-[18px] font-semibold text-black font-sans">
           <h2 className="font-sans text-[14px] md:text-[18px] font-semibold  text-start">
-            {title[0] !== 'G' ? (
+            {title[2] !== 'Y' ? (
               <div>
                 <span className="text-[20px] md:text-[24px]">
                   {" "}
@@ -107,7 +107,7 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
 };
 
 const Curriculum1 = () => {
-  const [openIndex, setOpenIndex] = useState([0]);
+  const [openIndex, setOpenIndex] = useState([0,8]);
 
   const [isOpenEnquire, setIsOpenEnquire] = useState(false);
   const [isVisibleEnquire, setIsVisibleEnquire] = useState(false);

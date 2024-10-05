@@ -89,7 +89,7 @@ const MeetMentors = ({ bgColor }) => {
 
   return (
     <div
-      className={`flex flex-col pt-2 lg:pt-0 pb-10 lg:pb-16 `}
+      className={`flex flex-col pt-2 lg:pt-0 pb-10 lg:pb-16`}
       style={{ backgroundColor: bgColor }}
     >
       <div className="py-5 lg:py-10">

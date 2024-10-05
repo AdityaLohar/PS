@@ -65,7 +65,7 @@ const PmFellowshipHeroSection = () => {
 
   return (
     <div
-      className="bg-transparent md:px-10 xl:px-28 md:py-8 lg:pt-20 lg:pb-20 font-hind"
+      className="bg-transparent md:px-10 xl:px-28 md:py-8 lg:pt-12 lg:pb-20 font-hind"
       style={
         {
           // backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
@@ -77,28 +77,31 @@ const PmFellowshipHeroSection = () => {
       }
     >
       <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-8 items-center justify-between gap-6 md:gap-8 lg:gap-12 rounded-[24px] md:rounded-[32px] px-4 lg:px-8">
-        <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-[57%]">
-          <div className="flex flex-col gap-3 text-center lg:text-start">
-            <div>
-              <h1 className="text-[24px] md:text-[28px] lg:text-[40px] font-bold font-sans">
-                Product Management <br /> Fellowship Program
-              </h1>
+        <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-[70%]">
+          <div className="flex flex-col gap-4 border-2 border-[#00B5CE] px-2 py-4 lg:p-8 rounded-3xl shadow shadow-[rgba(215,245,255,1)]  shadow-xl">
+            <div className="flex flex-col gap-3 text-center lg:text-start">
+              <div>
+                <h1 className="text-[24px] md:text-[28px] lg:text-[40px] font-bold font-sans">
+                  Product Management <br /> Fellowship Program
+                </h1>
+              </div>
+              <div className="text-[18px]">Excel in Your Product Career</div>
             </div>
-            <div className="text-[18px]">Excel in Your Product Career</div>
+
+            <div className="flex justify-around lg:justify-start gap-10 text-[16px]">
+              <div>
+                <div className="text-[16px]">Start Date</div>
+                <div className="font-semibold text-[#00B5CE]">Oct 19, 2024</div>
+              </div>
+              <div>
+                <div className="text-[16px]">Duration</div>
+                <div className="font-semibold text-[#00B5CE]">10 Weeks</div>
+              </div>
+            </div>
+
           </div>
 
-          <div className="flex justify-around lg:justify-start gap-10 text-[16px]">
-            <div>
-              <div className="text-[16px]">Start Date</div>
-              <div className="font-semibold text-[#00B5CE]">Oct 19, 2024</div>
-            </div>
-            <div>
-              <div className="text-[16px]">Duration</div>
-              <div className="font-semibold text-[#00B5CE]">10 Weeks</div>
-            </div>
-          </div>
-
-          <div className="text-[16px] grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl py-3">
+          <div className="text-[16px] grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl py-3 lg:w-4/5">
             <div className="flex flex-col gap-4 text-center items-center">
               <div>
                 <img src={heroIcon4} alt="" className="h-12 w-12 lg:h-14 lg:w-14" />
@@ -142,7 +145,7 @@ const PmFellowshipHeroSection = () => {
         </div>
 
         <div
-          className="relative rounded-[24px] md:rounded-[32px] lg:w-[37%] shadow-lg p-4 md:p-12 lg:absolute border border-1 border-[#00B5CE] lg:right-10 lg:top-[50%] lg:transform lg:-translate-y-1/2 pm-hero-gradient-bg lg:pm-hero-gradient-bg"
+          className="relative rounded-[24px] md:rounded-[32px] lg:w-[37%] shadow-lg p-4 md:p-12 lg:absolute border-2 border-[#00B5CE] lg:right-10 lg:top-[50%] lg:transform lg:-translate-y-1/2 pm-hero-gradient-bg lg:pm-hero-gradient-bg"
           // style={{
           //   background: "linear-gradient(to bottom, white 57%, #D7F5FF 50%)", // 2/3 white, 1/3 blue
           // }}

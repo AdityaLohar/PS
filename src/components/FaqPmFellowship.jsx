@@ -54,38 +54,42 @@ const DropdownList = ({ len, flag }) => {
       "Do I need prior work experience to be eligible for job interviews?",
       "Which companies hire from the Product Space Fellowship?",
       "What if I need to withdraw from the program? Is there a refund policy?",
-      "Is the Product Space Fellowship worth it?"
+      "Is the Product Space Fellowship worth it?",
+      "What are the session timings for the fellowship?",
+      " I still have doubts about the course. Can I connect with mentors or alumni of Product Space?"
     ];
     
     const contents = [
-      "Our Product Management Fellowship is a 10-week intensive online program designed to help you kickstart or transition into a product management career. Delivered through live sessions on Teams, our fellowship is led by experienced industry professionals and product leaders from top companies. You'll learn PM fundamentals, tackle real-world case studies, and receive personalized feedback and mentorship.",
+      "Our Product Management Fellowship is a 10-week online program designed to help you excel in your product management career. It includes live sessions on Teams, taught by experienced industry experts and product leaders from top companies. You will learn the practical application of key PM skills, work on real-world case studies, and receive personal feedback and mentorship to help you put your knowledge into action.",
       
-      "Anyone with a passion for product management can apply! Whether you're a student, working professional, or looking for a career switch, we welcome applicants from all backgrounds. No specific degree, CGPA, or prior experience is required.",
+      "Anyone with a passion for product management can apply! Whether you're a student, working professional, or looking for a career switch, we welcome applicants from all backgrounds. There are no requirements for a specific degree, CGPA, or prior experience.",
       
-      "The fellowship has a one-time enrollment fee. There are no hidden costs—everything you need to succeed is included in this fee, from live sessions to placement support.",
+      "The fellowship has a one-time enrollment fee. There are no hidden costs",
       
-      "No worries! All live sessions are recorded and shared with fellows, so you can catch up at your convenience. That said, we encourage attending live sessions for maximum engagement, as they're designed to be interactive and packed with opportunities to ask questions.",
+      "No worries! All live sessions are recorded and made available to you, so you can watch it later at your convenience. That being said, we do encourage attending live for the best experience, as they're designed to be participatory and interactive and packed with opportunities to ask questions.",
       
-      "As a Product Space Fellow, you'll receive:\n- Expert instruction from seasoned product managers.\n- Hands-on learning with real-world case studies.\n- Comprehensive placement support with access to mock interviews, alumni connections, and hiring managers.\n- Exclusive resources and tools to help you succeed in the PM world.",
+      "As a Product Space Fellow, you'll receive: Expert mentorship from seasoned product managers. Practical learning with real-world case studies. 1 year placement support with access to mock interviews, alumni connections, and hiring managers. Exclusive resources and tools to help you succeed in the PM world.",
       
-      "Absolutely! We welcome pre-final year students who are eager to learn and build their careers early. This fellowship can give you a head start in the product management field.",
+      "Absolutely! We welcome pre-final year students who are eager to learn and build their careers in product management to apply. This fellowship is a great way to kickstart your career and gain valuable early experience in the field.",
       
-      "You'll receive:\n- Weekly live sessions with industry experts.\n- Access to exclusive learning materials, tools, and weekly challenges based on real-world scenarios.",
+      "You'll receive: Weekly live sessions with industry experts.Exclusive learning materials, practical tools, and weekly challenges based on real-world scenarios. One year of placement support to help you land a role in product management.",
       
       "We have a new cohort starting every 1.5 months. Stay tuned for our next opening!",
       
-      "Upon completion, you'll be ready to apply for full-time product management roles or internships at top companies. Whether you're a student or a working professional, this fellowship will make you eligible for PM, APM, and product internships across industries.",
+      "This fellowship will make you industry-ready to apply for full-time product management roles or internships at top companies. Whether you're a student or a working professional, you'll be prepared for roles like Product Manager (PM), Associate Product Manager (APM), and product internships across various industries.",
       
-      "Nope! Completing your weekly milestones and final project with a passing grade is all it takes to be eligible for interviews.",
+      "Not at all! As long as you complete the weekly milestones and final project with a passing grade, you'll be eligible for job interviews.",
       
-      "We partner with a diverse range of companies, from startups to established enterprises. Our hiring partners include over 310 companies, and new companies/startups are added with each cohort.",
+      "We work with a wide variety of companies, from startups to large enterprises. Over 310 companies are part of our hiring network, and we add new partners with each cohort.",
       
-      "Refunds can be requested up to two weeks before the fellowship start date. We'll issue a full refund if the reason is valid. Requests made after the deadline will be reviewed at the discretion of our team.",
+      "You can request a refund up to two weeks before the fellowship begins. If your reason is valid, we'll provide a full refund. Any requests made after the deadline will be reviewed on a case-by-case basis by our team.",
       
-      "If you're serious about launching your product management career, the fellowship offers the perfect blend of knowledge, mentorship, and placement support. But don't take our word for it—check out our success stories from alumni who've landed their dream PM roles!"
-    ];
-    
-      
+      "If you're serious about launching your product management career, the fellowship offers the perfect blend of knowledge, mentorship, and placement support. But don't take our word for it—check out our success stories from alumni who've landed their dream PM roles!",
+
+      "The sessions are held on Saturdays and Sundays, with 3-hour classes each day. Any additional sessions are held on Wednesdays from 9:00 PM to 10:30 PM.",
+
+      "Yes, you can! You can book a call with one of our mentors or schedule a call with an alumni member to clarify any questions you have. Book a call with a mentor | Book a call with an alumni."
+    ];      
 
       const handleToggle = (index) => {
         setOpenIndex(openIndex === index ? null : index);

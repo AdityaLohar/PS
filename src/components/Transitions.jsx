@@ -1,11 +1,25 @@
 import alumni from "../data/AlumniData";
 import chevron from "../assets/chevron-double.svg";
+import { useState } from "react";
 
 const TransitionCard = ({
   profile,
   name,
   curCompany,
 }) => {
+  const [isSquare, setIsSquare] = useState(false);
+
+    const handleImageLoad = (e) => {
+        const imgWidth = e.target.naturalWidth;
+        const imgHeight = e.target.naturalHeight;
+        
+        if (imgWidth === imgHeight) {
+            setIsSquare(true);
+        } else {
+            setIsSquare(false);
+        }
+    };
+    
   return (
     <div
       className="w-[220px] h-[266px] rounded-3xl bg-white p-4 flex flex-col items-center justify-between gap-4 bg-white"
@@ -29,8 +43,9 @@ const TransitionCard = ({
       <div className="flex items-center h-[50px] justify-center w-full">
         <img
             src={curCompany}
-            className="h-12 w-auto"
             alt="company"
+            className={isSquare ? "w-16 h-auto" : "h-12 w-auto"}
+            onLoad={handleImageLoad}
         />
       </div>
     </div>

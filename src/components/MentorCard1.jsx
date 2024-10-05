@@ -3,7 +3,7 @@ import rectangle from "../assets/Rectangle.svg";
 
 const MentorCard1 = ({ id, profile, name, company, post, linkedIn, img }) => {
   return (
-    <div className="w-[280px] h-[308px] lg:w-[350px] lg:h-[380px] flex flex-col gap-3 items-center p-4 border rounded-2xl bg-white">
+    <div className="w-[280px] h-[308px] lg:w-[350px] lg:h-[380px] flex flex-col gap-3 items-center p-4 border-2 border-[#f5f5f5] rounded-2xl bg-white shadow-lg">
       <div>
         <div className="flex items-center justify-center overflow-hidden mb-4 mt-2">
           <img
