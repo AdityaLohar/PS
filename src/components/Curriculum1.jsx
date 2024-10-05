@@ -82,7 +82,7 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
           ))}
         </div>
 
-        {title[0] !== 'G' ? (
+        {title[2] !== 'Y' ? (
           <div className="space-y-3 rounded-2xl">
             <div className="font-bold text-[16px]">Case Studies</div>
             <div className="flex gap-4">

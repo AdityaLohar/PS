@@ -138,7 +138,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
                 Enroll in the PM Fellowship Program
                 </h2>
                 <h3 className="text-[14px] md:text-[16px] mb-4 text-center">
-                Sub-Heading -Excel in Your Product Management Career with practical learning, 1-1 mentorship and placement assistance.
+                Excel in Your Product Management Career with practical learning, 1-1 mentorship and placement assistance.
                 </h3>
 
                 <div className="mb-4">
