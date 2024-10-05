@@ -134,21 +134,13 @@ const PmFellowshipHeroSection = () => {
               <div>Fellowship Timeline</div>
             </div>
           </div>
-
-          <div className="flex lg:hidden items-center gap-1 text-[16px] mt-3 lg:mt-6">
-            <img src={clock} alt="" className="pb-1" />
-            <div>
-              Hurry! <span className="font-bold">50 people</span> have already
-              enrolled in the past 1 month
-            </div>
-          </div>
         </div>
 
         <div
-          className="relative rounded-[24px] md:rounded-[32px] lg:w-[37%] shadow-lg p-4 md:p-12 lg:absolute border-2 border-[#00B5CE] lg:right-10 lg:top-[50%] lg:transform lg:-translate-y-1/2 pm-hero-gradient-bg lg:pm-hero-gradient-bg"
-          // style={{
-          //   background: "linear-gradient(to bottom, white 57%, #D7F5FF 50%)", // 2/3 white, 1/3 blue
-          // }}
+          className="relative rounded-[24px] md:rounded-[32px] lg:w-[37%] shadow-lg p-4 md:p-12 md:py-10 lg:absolute border-2 border-[#00B5CE] lg:right-10 lg:top-[50%] lg:transform lg:-translate-y-1/2"
+          style={{
+            background: "linear-gradient(to bottom, white 57%, #D7F5FF 50%)", // 2/3 white, 1/3 blue
+          }}
         >
           <div
             className="absolute top-0 right-5 sm:right-10 h-1/2 text-white py-1 px-3 text-[14px] pt-3"
@@ -212,7 +204,7 @@ const PmFellowshipHeroSection = () => {
             Download Curriculum
           </button>
 
-          <div className="hidden lg:flex items-center gap-1 text-[16px] mt-3 lg:mt-6">
+          <div className="flex items-center gap-1 text-[16px] mt-6">
             <img src={clock} alt="" className="pb-1" />
             <div>
               Hurry! <span className="font-bold">50 people</span> have already
