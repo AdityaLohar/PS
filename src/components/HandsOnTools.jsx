@@ -16,7 +16,7 @@ const ToolCard = ({logo, title}) => {
 
 const HandsOnTools = () => {
   return (
-    <div className="flex flex-col bg-white pb-8 px-4 md:px-10 xl:px-32 pt-8">
+    <div className="flex flex-col bg-white pb-8 px-4 md:px-10 xl:px-32 pt-4 lg:pt-0 bg-[#f5f5f5]">
       <div className="py-5 lg:py-12 lg:space-y-12">
         <div className="text-[24px] lg:text-[40px] font-bold px-2 text-center font-sans">
           Hands on practice with tools

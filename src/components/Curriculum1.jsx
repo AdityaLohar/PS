@@ -147,7 +147,7 @@ const Curriculum1 = () => {
   };
 
   return (
-    <div className="flex flex-col pt-2 lg:pt-0 px-4 xl:px-20">
+    <div className="flex flex-col pt-2 pb-6 lg:pb-10 lg:pt-0 px-4 xl:px-20">
       <div className="py-5 lg:py-14 flex flex-col md:flex-row md:px-10 justify-between">
 
         <div className="w-full md:w-2/3 space-y-4 md:space-y-2">

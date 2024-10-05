@@ -75,7 +75,6 @@ const PmFellowship = () => {
           {/* <StructureOfPmFellowship /> */}
           <Curriculum1 />
           <HandsOnTools />
-          <WhyPmFellowship bgColor={"#F5F5F5"} />
           <MeetMentors bgColor={"#fff"} />
           <div ref={sectionRef} id="reviews">
             <ReviewPmFellowship />
