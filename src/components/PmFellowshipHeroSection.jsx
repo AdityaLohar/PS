@@ -204,7 +204,7 @@ const PmFellowshipHeroSection = () => {
             Download Curriculum
           </button>
 
-          <div className="flex items-center gap-1 text-[16px] mt-6">
+          <div className="flex items-center gap-1 text-[14px] lg:text-[16px] mt-6">
             <img src={clock} alt="" className="pb-1" />
             <div>
               Hurry! <span className="font-bold">50 people</span> have already
