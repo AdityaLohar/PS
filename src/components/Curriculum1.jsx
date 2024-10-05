@@ -19,7 +19,7 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
       }`}
     >
       <div
-        className={`flex md:justify-between items-center cursor-pointer transition-all duration-500 ease-in-out ${
+        className={`flex justify-between items-center cursor-pointer transition-all duration-500 ease-in-out ${
           isOpen ? "rounded-t-md" : "rounded-md"
         } ${title[2] !== 'Y' ? "bg-[#E6E6E6]" : "bg-[#AEECFF]" } p-5`}
         onClick={onClick}

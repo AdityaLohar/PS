@@ -78,7 +78,7 @@ const PmFellowshipHeroSection = () => {
     >
       <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-8 items-center justify-between gap-6 md:gap-8 lg:gap-12 rounded-[24px] md:rounded-[32px] px-4 lg:px-8">
         <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-[70%]">
-          <div className="flex flex-col gap-4 border-2 border-[#00B5CE] px-2 py-4 lg:p-8 rounded-3xl shadow shadow-[rgba(215,245,255,1)]  shadow-xl">
+          <div className="flex flex-col gap-4 border-2 border-[#00B5CE] px-2 py-4 lg:p-8 rounded-3xl">
             <div className="flex flex-col gap-3 text-center lg:text-start">
               <div>
                 <h1 className="text-[24px] md:text-[28px] lg:text-[40px] font-bold font-sans">
