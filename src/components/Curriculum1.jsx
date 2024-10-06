@@ -84,7 +84,7 @@ const CurriculumMaterial = ({ title, desc, imgs, isOpen, onClick }) => {
 
         {title[2] !== 'Y' ? (
           <div className="space-y-3 rounded-2xl">
-            <div className="font-bold text-[16px]">Case Studies</div>
+            <div className="font-bold text-[16px]">Case Studies and Tools</div>
             <div className="flex gap-4">
               {imgs.map((logo, index) => (
                 <div key={index}>
