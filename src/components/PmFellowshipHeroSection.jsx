@@ -3,10 +3,11 @@ import disco3 from "../assets/disco-lights1.png";
 import disco2 from "../assets/disco-lights2.png";
 import disco1 from "../assets/disco-lights3.png";
 
-import heroIcon1 from "../assets/pm-hero-icon1.svg";
-import heroIcon2 from "../assets/pm-hero-icon2.svg";
-import heroIcon3 from "../assets/pm-hero-icon3.svg";
-import heroIcon4 from "../assets/pm-hero-icon4.svg";
+import heroIcon1 from "../assets/pm-hero-1.svg";
+import heroIcon2 from "../assets/pm-hero-2.svg";
+import heroIcon3 from "../assets/pm-hero-3.svg";
+import heroIcon4 from "../assets/pm-hero-4.svg";
+import heroIcon5 from "../assets/pm-hero-5.svg";
 
 import clock from "../assets/clock.svg";
 import download from "../assets/download.svg";
@@ -65,7 +66,7 @@ const PmFellowshipHeroSection = () => {
 
   return (
     <div
-      className="bg-transparent md:px-10 xl:px-28 md:py-8 lg:pt-12 lg:pb-20 font-hind"
+      className="bg-transparent md:px-10 xl:px-28 md:py-8 lg:pt-20 lg:pb-20 font-hind"
       style={
         {
           // backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
@@ -78,7 +79,7 @@ const PmFellowshipHeroSection = () => {
     >
       <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-8 items-center justify-between gap-6 md:gap-8 lg:gap-12 rounded-[24px] md:rounded-[32px] px-4 lg:px-8">
         <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-[70%]">
-          <div className="flex flex-col gap-4 border-2 border-[#00B5CE] px-2 py-4 lg:p-8 rounded-3xl">
+          <div className="flex flex-col gap-4 lg:border-2 border-[#00B5CE] px-2 py-0 lg:p-8 rounded-3xl">
             <div className="flex flex-col gap-3 text-center lg:text-start">
               <div>
                 <h1 className="text-[24px] md:text-[28px] lg:text-[40px] font-bold font-sans">
@@ -98,10 +99,9 @@ const PmFellowshipHeroSection = () => {
                 <div className="font-semibold text-[#00B5CE]">10 Weeks</div>
               </div>
             </div>
-
           </div>
 
-          <div className="text-[16px] grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl py-3 lg:w-4/5">
+          {/* <div className="text-[16px] grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl py-3 lg:w-4/5">
             <div className="flex flex-col gap-4 text-center items-center">
               <div>
                 <img src={heroIcon4} alt="" className="h-12 w-12 lg:h-14 lg:w-14" />
@@ -133,7 +133,7 @@ const PmFellowshipHeroSection = () => {
               <div className="font-semibold">10 Weeks</div>
               <div>Fellowship Timeline</div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div
@@ -229,6 +229,69 @@ const PmFellowshipHeroSection = () => {
             isOpen={isOpen}
             toggleModal={toggleModal}
           />
+        </div>
+      </div>
+
+      <div className="text-[16px] grid grid-cols-2 lg:grid-cols-5 gap-8 rounded-2xl px-4 lg:px-0 py-6 border-2 border-gray-100 mt-2 lg:mt-24 mx-4 lg:mx-8 shadow-lg mb-12 lg:mb-0">
+        {/* Live Projects */}
+        <div className="flex flex-col justify-between items-start lg:items-center gap-2 text-start">
+          <div className="flex items-start lg:items-center gap-2">
+            <img src={heroIcon1} alt="Live Projects Icon" className="h-5 w-5" />
+            <div className="font-semibold">Live Projects</div>
+          </div>
+          <div className="text-gray-600">Practical Learning</div>
+        </div>
+
+        {/* Personalized Guidance */}
+        <div className="flex flex-col justify-between items-start lg:items-center gap-2 text-start">
+          <div className="flex items-start lg:items-center gap-2">
+            <img
+              src={heroIcon2}
+              alt="Personalized Guidance Icon"
+              className="h-5 w-5"
+            />
+            <div className="font-semibold">Personalized Guidance</div>
+          </div>
+          <div className="text-gray-600">1-1 Guidance</div>
+        </div>
+
+        {/* Interview Preparation */}
+        <div className="flex flex-col justify-between items-start lg:items-center gap-2 text-start">
+          <div className="flex items-start lg:items-center gap-2">
+            <img
+              src={heroIcon3}
+              alt="Interview Preparation Icon"
+              className="h-6 w-6"
+            />
+            <div className="font-semibold">Interview Preparation</div>
+          </div>
+          <div className="text-gray-600">Comprehensive Prep Sessions</div>
+        </div>
+
+        {/* Placement Support */}
+        <div className="flex flex-col justify-between items-start lg:items-center gap-2 text-start">
+          <div className="flex items-start lg:items-center gap-2">
+            <img
+              src={heroIcon4}
+              alt="Placement Support Icon"
+              className="h-6 w-6"
+            />
+            <div className="font-semibold">Placement Support</div>
+          </div>
+          <div className="text-gray-600">1 Year Career Assistance</div>
+        </div>
+
+        {/* Portfolio Preparation */}
+        <div className="flex flex-col justify-between items-start lg:items-center gap-2 text-start">
+          <div className="flex items-start lg:items-center gap-2">
+            <img
+              src={heroIcon5}
+              alt="Portfolio Preparation Icon"
+              className="h-6 w-6"
+            />
+            <div className="font-semibold">Portfolio Preparation</div>
+          </div>
+          <div className="text-gray-600">Build your brand</div>
         </div>
       </div>
     </div>
