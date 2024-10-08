@@ -196,7 +196,7 @@ const PmFellowshipHeroSection = () => {
             <img src={heroIcon1} alt="Live Projects Icon" className="h-5 w-5" />
             <div className="font-semibold">Live Projects</div>
           </div>
-          <div className="text-gray-600">Practical Learning</div>
+          <div className="text-gray-600">Cases, Contests & Teardowns</div>
         </div>
 
         {/* Personalized Guidance */}
@@ -209,7 +209,7 @@ const PmFellowshipHeroSection = () => {
             />
             <div className="font-semibold">Personalized Guidance</div>
           </div>
-          <div className="text-gray-600">1-1 Guidance</div>
+          <div className="text-gray-600">1-1 Mentorship</div>
         </div>
 
         {/* Interview Preparation */}
@@ -222,7 +222,7 @@ const PmFellowshipHeroSection = () => {
             />
             <div className="font-semibold">Interview Preparation</div>
           </div>
-          <div className="text-gray-600">Comprehensive Prep Sessions</div>
+          <div className="text-gray-600">Comprehensive Mocks</div>
         </div>
 
         {/* Placement Support */}
@@ -248,7 +248,7 @@ const PmFellowshipHeroSection = () => {
             />
             <div className="font-semibold">Portfolio Preparation</div>
           </div>
-          <div className="text-gray-600">Build your brand</div>
+          <div className="text-gray-600">Linkedin & Medium</div>
         </div>
       </div>
 
@@ -266,7 +266,7 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Live Projects</div>
             </div>
-            <div className="text-gray-600">Practical Learning</div>
+            <div className="text-gray-600">Cases, Contests & Teardowns</div>
           </div>
 
           <div className="item flex gap-4">
@@ -278,7 +278,7 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Personalized Guidance</div>
             </div>
-            <div className="text-gray-600">1-1 Guidance</div>
+            <div className="text-gray-600">1-1 Mentorship</div>
           </div>
 
           <div className="item flex gap-4">
@@ -290,7 +290,7 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Interview Preparation</div>
             </div>
-            <div className="text-gray-600">Comprehensive Prep Sessions</div>
+            <div className="text-gray-600">Comperehence Mocks & Content</div>
           </div>
 
           <div className="item flex gap-4">
@@ -314,10 +314,10 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Portfolio Preparation</div>
             </div>
-            <div className="text-gray-600">Build your brand</div>
+            <div className="text-gray-600">Linkedin & Medium</div>
           </div>
 
-          {/* Duplicate items for seamless scroll */}
+          {/* Duplicate */}
           <div className="item flex gap-4">
             <div className="flex gap-2">
               <img
@@ -327,7 +327,7 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Live Projects</div>
             </div>
-            <div className="text-gray-600">Practical Learning</div>
+            <div className="text-gray-600">Cases, Contests & Teardowns</div>
           </div>
 
           <div className="item flex gap-4">
@@ -339,7 +339,7 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Personalized Guidance</div>
             </div>
-            <div className="text-gray-600">1-1 Guidance</div>
+            <div className="text-gray-600">1-1 Mentorship</div>
           </div>
 
           <div className="item flex gap-4">
@@ -351,7 +351,7 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Interview Preparation</div>
             </div>
-            <div className="text-gray-600">Comprehensive Prep Sessions</div>
+            <div className="text-gray-600">Comperehence Mocks & Content</div>
           </div>
 
           <div className="item flex gap-4">
@@ -375,8 +375,9 @@ const PmFellowshipHeroSection = () => {
               />
               <div className="font-semibold">Portfolio Preparation</div>
             </div>
-            <div className="text-gray-600">Build your brand</div>
+            <div className="text-gray-600">Linkedin & Medium</div>
           </div>
+          
         </div>
       </div>
     </div>

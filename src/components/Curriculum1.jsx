@@ -152,7 +152,7 @@ const Curriculum1 = () => {
 
         <div className="w-full md:w-2/3 space-y-4 md:space-y-2">
           <div className="text-[24px] lg:text-[40px] font-bold font-sans text-center lg:text-start">
-          How your curriculum will look like
+          What your curriculum will look like
           </div>
           <div className="text-[16px]">
             <p>
