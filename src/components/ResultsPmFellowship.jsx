@@ -125,7 +125,7 @@ const ResultsPmFellowship = () => {
           onClick={toggleModal}
           className="bg-[#FFC303] font-semibold text-[18px] p-4 rounded-full w-[300px] md:w-[300px]"
         >
-          You can be <span className="font-bold">NEXT</span>
+          Kickstart Your Journey
         </button>
       </div>
 
