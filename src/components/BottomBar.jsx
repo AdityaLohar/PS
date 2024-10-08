@@ -116,15 +116,8 @@ const BottomBar = () => {
 
         {/* Right side: Seats and Enroll button */}
         <div className="flex flex-col items-end sm:flex-row sm:items-center sm:gap-4 gap-2 w-full sm:w-auto justify-between">
-          <div className="bg-[#FFF7D9] flex gap-2 sm:gap-3 items-center py-1 px-4 sm:px-5 w-full sm:w-auto">
-            <div>Seats filling fast</div>
-            <div>
-              <img src={flash} alt="Seats filling fast" className="w-5 h-5" />
-            </div>
-          </div>
-
           <button
-            className="shimmer bg-[#FF559E] text-white py-2 px-4 sm:px-6 rounded-full w-full sm:w-auto"
+            className="shimmer bg-[#FF559E] text-white py-3 px-4 sm:px-6 rounded-full w-full sm:w-auto"
             onClick={toggleModal}
           >
             Enroll Now
