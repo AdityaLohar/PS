@@ -67,15 +67,6 @@ const PmFellowshipHeroSection = () => {
   return (
     <div
       className="bg-transparent md:px-10 xl:px-28 md:py-8 lg:pt-20 lg:pb-20 font-hind"
-      style={
-        {
-          // backgroundImage: `url(${bgImages[0]}), url(${bgImages[1]}), url(${bgImages[2]})`,
-          // backgroundPosition: "bottom center, bottom right -10%, bottom left -5%",
-          // backgroundSize: "cover, contain, contain", // Adjust size for each image
-          // backgroundRepeat: "no-repeat, no-repeat, no-repeat", // Prevent repeating
-          // transition: "background-image 0.3s ease-in-out"
-        }
-      }
     >
       <div className="bg-white relative flex flex-col lg:flex-row py-4 lg:py-8 items-center justify-between gap-6 md:gap-8 lg:gap-12 rounded-[24px] md:rounded-[32px] px-4 lg:px-8">
         <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-[70%]">
@@ -100,40 +91,6 @@ const PmFellowshipHeroSection = () => {
               </div>
             </div>
           </div>
-
-          {/* <div className="text-[16px] grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl py-3 lg:w-4/5">
-            <div className="flex flex-col gap-4 text-center items-center">
-              <div>
-                <img src={heroIcon4} alt="" className="h-12 w-12 lg:h-14 lg:w-14" />
-              </div>
-              <div className="font-semibold">Mentorship</div>
-              <div>With Experienced PM&apos;s</div>
-            </div>
-
-            <div className="flex flex-col gap-4 text-center items-center">
-              <div>
-                <img src={heroIcon3} alt="" className="h-12 w-12 lg:h-14 lg:w-14" />
-              </div>
-              <div className="font-semibold">Live</div>
-              <div>Sessions on Zoom</div>
-            </div>
-
-            <div className="flex flex-col gap-4 text-center items-center">
-              <div>
-                <img src={heroIcon2} alt="" className="h-12 w-12 lg:h-14 lg:w-14" />
-              </div>
-              <div className="font-semibold">Placement</div>
-              <div>Support for 1 Year</div>
-            </div>
-
-            <div className="flex flex-col gap-4 text-center items-center">
-              <div>
-                <img src={heroIcon1} alt="" className="h-12 w-12 lg:h-14 lg:w-14" />
-              </div>
-              <div className="font-semibold">10 Weeks</div>
-              <div>Fellowship Timeline</div>
-            </div>
-          </div> */}
         </div>
 
         <div
@@ -151,13 +108,13 @@ const PmFellowshipHeroSection = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <span className="font-bold">25%</span> <br /> OFF
+            <span className="font-bold">20%</span> <br /> OFF
           </div>
           <div className="text-start pt-2">
             <p className="text-[14px]">👉🏻 Best price for next 5 seats</p>
             <div className="flex gap-2 items-end">
               <p className="text-[24px] md:text-[32x] lg:text-[40px] font-bold text-black font-sans">
-                ₹22,499
+                ₹23,999
               </p>
               <p className="text-[18px] line-through pb-1">₹29,999</p>
             </div>

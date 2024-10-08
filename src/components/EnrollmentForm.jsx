@@ -2,14 +2,14 @@
 import { useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { FaCheckCircle, FaExclamationCircle, FaTimes } from "react-icons/fa";
-import { z } from "zod";
+// import { z } from "zod";
 import axios from 'axios';
 
-const schema = z.object({
-  email: z.string().email("Invalid email address"),
-});
+// const schema = z.object({
+//   email: z.string().email("Invalid email address"),
+// });
 
-const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_BASE_URL;
+const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_ENROLLMENT_URL;
 const accessToken = import.meta.env.VITE_AIRTABLE_ACCESS_TOKEN;
 
 
@@ -21,7 +21,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
   const [showNotification, setShowNotification] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const saveUserData = async (name, email, phoneNumber) => {
+  const saveUserData = async (name, email, phoneNumber, currentTimestamp) => {
     try {
       const response = await axios.post(
         airtableBaseUrl,
@@ -30,6 +30,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
             Name: name,
             'Mobile Number': phoneNumber, // Make sure this matches exactly
             'Email Id': email,           // Make sure this matches exactly
+            "Timestamp": currentTimestamp,
           },
         },
         {
@@ -67,9 +68,9 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
   };
 
   const handleSubmit = async () => {
-    const result = schema.safeParse({ email });
+    // const result = schema.safeParse({ email });
 
-    if (name === "" || !number) {
+    if (name === "" || !number || email === "") {
       setNotification({
         type: "error",
         title: "Error",
@@ -81,21 +82,10 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
       }, 5000);
       return;
     }
-    else if (!result.success) {
-      setNotification({
-        type: "error",
-        title: "Failed",
-        description: "Invalid email address. Please try again.",
-      });
-      setShowNotification(true);
-      setTimeout(() => {
-        setShowNotification(false);
-      }, 5000);
-      return;
-    }
     
     setLoading(true);
-    const res = await saveUserData(name, email, number);
+    const currentTimestamp = new Date().toLocaleString(); // e.g., "10/7/2024, 12:34:56 PM"
+    const res = await saveUserData(name, email, number, currentTimestamp);
     setLoading(false);
 
     window.location.href = "https://rzp.io/l/getintoPM";
@@ -123,7 +113,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
             }`}
           >
             {/* Form content */}
-            <div className="bg-white p-6 py-12 md:p-12 rounded-3xl shadow-lg relative w-[300px] custom-3:w-[400px] lg:w-[500px] transform transition-transform duration-300 ease-out">
+            <div className="bg-white p-12 rounded-3xl shadow-lg relative w-[300px] custom-3:w-[400px] lg:w-[500px] transform transition-transform duration-300 ease-out">
               {/* Close button */}
               <button
                 onClick={toggleModal}
@@ -174,7 +164,7 @@ const EnrollmentForm = ({ isVisible, setIsVisible, setIsOpen, isOpen, toggleModa
                 <div className="flex flex-col items-center">
                   <button
                     onClick={handleSubmit}
-                    className="text-[14px] lg:text-[20px] w-full bg-[#FEC923] text-black font-semibold p-4 md:px-6 md:py-4 rounded-full hover:bg-yellow-500"
+                    className="text-[14px] lg:text-[20px] w-full bg-[#FEC923] text-black font-semibold p-2 md:px-6 md:py-4 rounded-full hover:bg-yellow-500"
                   >
                     {loading ? "Loading..." : "Begin Your PM Career"}
                   </button>

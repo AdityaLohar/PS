@@ -2,14 +2,9 @@
 import { useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { FaCheckCircle, FaExclamationCircle, FaTimes } from "react-icons/fa";
-import { z } from "zod";
 import axios from 'axios';
 import { isOpenFormState, isVisibleformState } from "../atoms/modalState";
 import { useRecoilState } from "recoil";
-
-const schema = z.object({
-  email: z.string().email("Invalid email address"),
-});
 
 const airtableBaseUrl = import.meta.env.VITE_AIRTABLE_BASE_CONTACT_US_URL;
 const accessToken = import.meta.env.VITE_AIRTABLE_ACCESS_TOKEN;
@@ -32,7 +27,7 @@ const ContactUsForm = () => {
     setIsOpen(false);
   }
 
-  const saveUserData = async (name, email, phoneNumber, query) => {
+  const saveUserData = async (name, email, phoneNumber, query, currentTimestamp) => {
     try {
       const response = await axios.post(
         airtableBaseUrl,
@@ -42,6 +37,8 @@ const ContactUsForm = () => {
             'Mobile Number': phoneNumber, // Make sure this matches exactly
             'Email Id': email,           // Make sure this matches exactly
             'Query': query,
+            "Timestamp": currentTimestamp,
+
           },
         },
         {
@@ -51,7 +48,6 @@ const ContactUsForm = () => {
           },
         }
       );
-      console.log('Data saved successfully:', response.data);
 
       setNotification({
         type: "success",
@@ -79,9 +75,8 @@ const ContactUsForm = () => {
   };
 
   const handleSubmit = async () => {
-    const result = schema.safeParse({ email });
 
-    if (name === "" || !number) {
+    if (name === "" || !number || email === "") {
       setNotification({
         type: "error",
         title: "Error",
@@ -93,21 +88,10 @@ const ContactUsForm = () => {
       }, 5000);
       return;
     }
-    else if (!result.success) {
-      setNotification({
-        type: "error",
-        title: "Failed",
-        description: "Invalid email address. Please try again.",
-      });
-      setShowNotification(true);
-      setTimeout(() => {
-        setShowNotification(false);
-      }, 5000);
-      return;
-    }
     
     setLoading(true);
-    const res = await saveUserData(name, email, number, query);
+    const currentTimestamp = new Date().toLocaleString(); // e.g., "10/7/2024, 12:34:56 PM"
+    const res = await saveUserData(name, email, number, query, currentTimestamp);
     setLoading(false);
 
     // Automatically hide notification after 10 seconds
