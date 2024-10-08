@@ -112,7 +112,7 @@ const BottomBar = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>  
 
         {/* Right side: Seats and Enroll button */}
         <div className="flex flex-col items-end sm:flex-row sm:items-center sm:gap-4 gap-2 w-full sm:w-auto justify-between">

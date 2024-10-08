@@ -232,7 +232,7 @@ const PmFellowshipHeroSection = () => {
         </div>
       </div>
 
-      <div className="text-[16px] grid grid-cols-2 lg:grid-cols-5 gap-8 rounded-2xl px-4 lg:px-0 py-6 border-2 border-gray-100 mt-2 lg:mt-24 mx-4 lg:mx-8 shadow-lg mb-12 lg:mb-0">
+      <div className="hidden text-[16px] lg:grid grid-cols-2 lg:grid-cols-5 gap-8 rounded-2xl px-4 lg:px-0 py-6 border-2 border-gray-100 mt-2 lg:mt-24 mx-4 lg:mx-8 shadow-lg mb-12 lg:mb-0">
         {/* Live Projects */}
         <div className="flex flex-col justify-between items-start lg:items-center gap-2 text-start">
           <div className="flex items-start lg:items-center gap-2">
@@ -292,6 +292,134 @@ const PmFellowshipHeroSection = () => {
             <div className="font-semibold">Portfolio Preparation</div>
           </div>
           <div className="text-gray-600">Build your brand</div>
+        </div>
+      </div>
+
+      {/* Carousel for smaller screens */}
+      {/* Carousel for smaller screens */}
+      <div className="pm-hero-wrapper text-[16px] lg:hidden py-6 border-t-2 border-b-2 border-gray-200 mt-2 mb-12 lg:mb-0">
+        <div className="carousel flex gap-0">
+          {/* Original items */}
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon1}
+                alt="Live Projects Icon"
+                className="h-5 w-5"
+              />
+              <div className="font-semibold">Live Projects</div>
+            </div>
+            <div className="text-gray-600">Practical Learning</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon2}
+                alt="Personalized Guidance Icon"
+                className="h-5 w-5"
+              />
+              <div className="font-semibold">Personalized Guidance</div>
+            </div>
+            <div className="text-gray-600">1-1 Guidance</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon3}
+                alt="Interview Preparation Icon"
+                className="h-6 w-6"
+              />
+              <div className="font-semibold">Interview Preparation</div>
+            </div>
+            <div className="text-gray-600">Comprehensive Prep Sessions</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon4}
+                alt="Placement Support Icon"
+                className="h-6 w-6"
+              />
+              <div className="font-semibold">Placement Support</div>
+            </div>
+            <div className="text-gray-600">1 Year Career Assistance</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon5}
+                alt="Portfolio Preparation Icon"
+                className="h-6 w-6"
+              />
+              <div className="font-semibold">Portfolio Preparation</div>
+            </div>
+            <div className="text-gray-600">Build your brand</div>
+          </div>
+
+          {/* Duplicate items for seamless scroll */}
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon1}
+                alt="Live Projects Icon"
+                className="h-5 w-5"
+              />
+              <div className="font-semibold">Live Projects</div>
+            </div>
+            <div className="text-gray-600">Practical Learning</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon2}
+                alt="Personalized Guidance Icon"
+                className="h-5 w-5"
+              />
+              <div className="font-semibold">Personalized Guidance</div>
+            </div>
+            <div className="text-gray-600">1-1 Guidance</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon3}
+                alt="Interview Preparation Icon"
+                className="h-6 w-6"
+              />
+              <div className="font-semibold">Interview Preparation</div>
+            </div>
+            <div className="text-gray-600">Comprehensive Prep Sessions</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon4}
+                alt="Placement Support Icon"
+                className="h-6 w-6"
+              />
+              <div className="font-semibold">Placement Support</div>
+            </div>
+            <div className="text-gray-600">1 Year Career Assistance</div>
+          </div>
+
+          <div className="item flex gap-4">
+            <div className="flex gap-2">
+              <img
+                src={heroIcon5}
+                alt="Portfolio Preparation Icon"
+                className="h-6 w-6"
+              />
+              <div className="font-semibold">Portfolio Preparation</div>
+            </div>
+            <div className="text-gray-600">Build your brand</div>
+          </div>
         </div>
       </div>
     </div>

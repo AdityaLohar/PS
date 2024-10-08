@@ -81,6 +81,50 @@ body {
   animation-play-state: var(--scroll-animation-play-state, running); /* Use CSS variable to control animation */
 }
 
+/* PM HERO CAROUSEL */
+.pm-hero-wrapper {
+  position: relative;
+  height: 110px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-72%); /* Scroll half the width to create an infinite loop */
+  }
+}
+
+.carousel {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 25s linear infinite;
+}
+
+.item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 52px;
+  border-right: 2px solid rgb(162, 162, 162);
+}
+
+
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll until half since it's duplicated */
+  }
+}
+
 @media (max-width: 768px) {
   .scroll-wrapper {
     animation-duration: 20s; /* Faster for mobile view */
