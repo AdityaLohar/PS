@@ -117,7 +117,7 @@ const BottomBar = () => {
         {/* Right side: Seats and Enroll button */}
         <div className="flex flex-col items-end sm:flex-row sm:items-center sm:gap-4 gap-2 w-full sm:w-auto justify-between">
           <button
-            className="shimmer bg-[#FF559E] text-white py-3 px-4 sm:px-6 rounded-full w-full sm:w-auto"
+            className="shimmer bg-[#FF559E] text-white font-semibold text-[16px] py-3 px-4 sm:px-6 rounded-full w-full sm:w-auto"
             onClick={toggleModal}
           >
             Enroll Now
